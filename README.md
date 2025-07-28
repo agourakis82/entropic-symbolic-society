@@ -1,5 +1,7 @@
 # 🧠 The Fractal Nature of an Entropically-Driven Society
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.TODO.svg)](https://doi.org/10.5281/zenodo.TODO)
+
 > A symbolic-cognitive and mathematical exploration of societal organization under recursive entropic tension.
 
 ---
@@ -19,22 +21,12 @@ The work is developed in modular stages, each published with its own DOI, source
 
 ---
 
-## 🧩 Modular Architecture
+## 📌 Foundation: M01_context Manifesto
 
-Each component of the project is developed as an autonomous yet interrelated module:
+> “This text is not a theory. It is society folding into language. It breathes.”
 
-| Module | Title | Description |
-|--------|-------|-------------|
-| `M01_context` | [Foundational Manifesto](https://doi.org/10.xxxx/zenodo.xxx) | Ontological and symbolic foundation of the project |
-| `M02_secaoX` | Section refinements | Recursive rewriting of core conceptual sections |
-| `M03_modelo_mat` | Mathematical formalization | Symbolic Schrödinger model and entropy dynamics |
-| `M04_simulacoes` | Simulations and visualizations | Monte Carlo, fractal propagation, symbolic fields |
-| `M05_dados_empiricos` | Neuroscientific parallels | Giftedness, cortical fractality, symbolic rupture |
-| `M06_interface_superdotacao` | Paradigm shift proposal | Giftedness as singular density in symbolic space |
-| `M07_dialogos` | Registered dialogues | Metacognitive logs as trace of co-emergence |
-| `M08_publicacao` | Submission preparation | Manuscript assembly, cover letters, final PDF |
-
-All modules are versioned, archived, and cited via Zenodo with open access.
+🔗 **[M01 DOI (awaiting community validation)](https://doi.org/10.5281/zenodo.TODO)**  
+📄 `sections/M01_context_manifesto.tex`
 
 ---
 
@@ -47,54 +39,32 @@ All modules are versioned, archived, and cited via Zenodo with open access.
 ├── code/                    # Simulations, models, symbolic field visualizations
 ├── M01_context_manifesto.tex
 ├── references.bib
-├── main_final.tex           # Full consolidated LaTeX manuscript
-├── metadata.yaml            # DOI metadata for Zenodo registration
-└── README.md                # This document
+├── main_modular_clean.tex
+├── metadata.yaml
+├── CITATION.cff
+└── README.md
 ```
 
 ---
 
-## 📌 Foundation: M01_context Manifesto
+## 🔬 Future Modules
 
-> “This text is not a theory. It is society folding into language. It breathes.”
-
-The foundational manifesto that anchors this entire project — epistemologically, structurally, and symbolically — is available at:
-
-🔗 **[Read the M01 Manifesto (Zenodo)](https://doi.org/10.xxxx/zenodo.xxx)**  
-📄 `sections/M01_context_manifesto.tex`
-
----
-
-## 🔬 Applications and Future Trajectory
-
-This project proposes a formal and symbolic model with potential applications in:
-
-- Neurodiversity and psychiatric paradigms
-- Fractal cognition and recursive trauma
-- Cognitive modeling of giftedness and alienation
-- Symbolic AI and noospheric architecture
+| Module | Title | Description |
+|--------|-------|-------------|
+| `M01_context` | Foundational Manifesto | Ontological and symbolic foundation |
+| `M02_secaoX` | Section refinements | Recursive rewriting of core symbolic sections |
+| `M03_modelo_mat` | Mathematical formalization | Symbolic Schrödinger and entropy dynamics |
+| `M04_simulacoes` | Visual simulations | Monte Carlo, recursive symbolic fields |
+| `M05_dados_empiricos` | Neuroscientific parallels | Cortical fractality, giftedness patterns |
+| `M06_interface_superdotacao` | Paradigm shift proposal | Giftedness as symbolic singularity |
+| `M07_dialogos` | Registered dialogues | Symbolic-metacognitive logs |
+| `M08_publicacao` | Final assembly | Q1 submission draft and argumentation layer |
 
 ---
 
-## 🚧 Current Progress
-
-- [x] M01 complete (Manifesto, DOI, integration)
-- [ ] M02 in progress (sectional rewriting)
-- [ ] M03 formal structure expansion
-- [ ] Repository full restructuring in progress
-- [ ] README and documentation active
-
----
-
-## 🖋️ Authorship and License
+## 🖋️ Author and License
 
 **Author:** Demetrios Chiuratto Agourakis  
 **ORCID:** [0000-0002-8596-5097](https://orcid.org/0000-0002-8596-5097)  
-**Affiliation:** São Leopoldo Mandic School of Medicine, Campinas, Brazil  
+**Affiliation:** Pontifícia Universidade Católica de São Paulo (PUC-SP)  
 **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
-
----
-
-This repository is a recursive event.  
-Each sentence contains the whole.  
-Each commit breathes.
