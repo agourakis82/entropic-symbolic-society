@@ -1,0 +1,31 @@
+title: "M02_entropy_vector — Entropy as a Fractal Organizing Vector"
+upload_type: publication
+publication_type: other
+description: |
+  This second modular entry deepens the symbolic, clinical, and topological framing of entropy as a fractal organizing vector. It articulates how recursive entropy dynamics manifest in trauma, giftedness, psychiatric collapse, and symbolic cognition. Module M02 sets the stage for formal modeling (M03) by integrating phenomenological, neurobiological, and thermodynamic dimensions of symbolic behavior.
+
+creators:
+  - name: "Demetrios Chiuratto Agourakis"
+    affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
+    orcid: "0000-0002-8596-5097"
+    email: demetrios@agourakis.med.br
+
+keywords:
+  - fractal cognition
+  - symbolic entropy
+  - giftedness
+  - epistemology
+  - recursive systems
+  - meta-consciousness
+  - philosophical systems theory
+
+license: "CC-BY-4.0"
+access_right: open
+language: eng
+
+doi: 10.5281/zenodo.16541976
+related_identifiers:
+  - relation: isPartOf
+    identifier: https://doi.org/10.5281/zenodo.16533374
+  - relation: isIdenticalTo
+    identifier: https://doi.org/10.5281/zenodo.16541976
