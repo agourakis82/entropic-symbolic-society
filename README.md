@@ -1,112 +1,79 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16783257.svg)](https://doi.org/10.5281/zenodo.16783257)
+# 🧠 The Fractal Nature of an Entropically-Driven Society
 
-**Code (Zenodo concept DOI)**: 10.5281/zenodo.16752238  
-**Version v1.6 DOI**: 10.5281/zenodo.16783257  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16533374.svg)](https://doi.org/10.5281/zenodo.16533374)
 
-**Preregistration (OSF)**: 10.17605/OSF.IO/FCT5U  
-**Raw Data (OSF)**: 10.17605/OSF.IO/C4RDH  
-**Derived Results (OSF)**: 10.17605/OSF.IO/CS3GN  
-**Validation Outputs (OSF)**: 10.17605/OSF.IO/WF67R  
-**Neuro Integration (OSF)**: 10.17605/OSF.IO/W2C34
-
-## Overview (Umbrella Project)
-This repository is the **philosophical and systems-level umbrella** for the research program on symbolic manifolds and entropy-driven cognition.  
-It hosts (i) the conceptual/LaTeX materials that articulate the theoretical framework and (ii) a **computational subproject**—the *NHB_Symbolic_Mainfold*—which implements a reproducible analysis pipeline aligned with *Nature Human Behaviour* editorial standards.
-
-- **Conceptual manuscript (root):** philosophical synthesis, formal modeling narrative, and cross-domain implications.  
-- **Computational subproject:** [`NHB_Symbolic_Mainfold/`](./NHB_Symbolic_Mainfold/) — Jupyter pipeline (01–06), code, data pointers, figures, and the NHB-oriented manuscript.
-
-**Version (umbrella):** v1.4  
-**DOI (umbrella / conceptual):** [10.5281/zenodo.16730036](https://doi.org/10.5281/zenodo.16730036)
-
-## Abstract (Conceptual)
-We introduce a symbolic–topological model in which cognitive states evolve as trajectories \( \gamma(t) = (\alpha, \kappa, E_r) \) on a three-dimensional manifold. Simulations reproduce neurotypical, gifted, twice-exceptional (2e), and collapse-prone profiles. The framework bridges symbolic cognition, entropy-driven brain theories, and dynamical systems—offering translational avenues for cognitive modeling, AI design, and psychiatric diagnostics.
+> A symbolic-cognitive and mathematical exploration of societal organization under recursive entropic tension.
 
 ---
 
-## Subprojects and DOIs
-- **NHB_Symbolic_Mainfold (computational)**  
-  - Folder: [`./NHB_Symbolic_Mainfold/`](./NHB_Symbolic_Mainfold/)  
-  - **Code DOI (Zenodo):** 10.5281/zenodo.16752238  
-  - **Data DOI (OSF):** 10.17605/OSF.IO/2AQP7  
-  - Contents: notebooks 01–06 (NHB-ready), scripts, reproducible environment, figures, and NHB manuscript (LaTeX).
+## ✳️ Overview
 
-- **Conceptual umbrella (this root)**  
-  - **DOI:** [10.5281/zenodo.16730036](https://doi.org/10.5281/zenodo.16730036)  
-  - Contents: philosophical LaTeX, sections/appendices, and high-level documentation.
+This repository hosts the modular research ecosystem of the project *The Fractal Nature of an Entropically-Driven Society*, authored by **Demetrios Chiuratto Agourakis**.  
+It proposes a groundbreaking epistemological framework uniting:
 
-> For installation and execution details, **do not duplicate instructions here**.  
-> Please refer to the **technical README** inside [`NHB_Symbolic_Mainfold/`](./NHB_Symbolic_Mainfold/).
+- Fractal geometry
+- Entropy and symbolic organization
+- Neurocognition and giftedness
+- Topologies of consciousness and trauma
+- Formal models of symbolic space
 
----
-
-## Quick Start (Pointer)
-If your goal is to **reproduce the NHB analyses**:
-1. Navigate to [`NHB_Symbolic_Mainfold/`](./NHB_Symbolic_Mainfold/).
-2. Follow `README.md` there (environment setup, data placement via OSF DOI, run notebooks 01→06).
-3. Outputs (csv, npy, png) will be created under `NHB_Symbolic_Mainfold/data/` and `NHB_Symbolic_Mainfold/results/`.
+The work is developed in modular stages, each published with its own DOI, source code, LaTeX source, and commentary. This is a living repository — it grows, folds, and reorganizes itself as the research evolves.
 
 ---
 
-## Repository Structure (High-level)
-```
+## 📌 Foundation: M01_context Manifesto
+
+> “This text is not a theory. It is society folding into language. It breathes.”
+
+🔗 **[M01 DOI (awaiting community validation)](https://doi.org/10.5281/zenodo.16533374)**  
+📄 `sections/M01_context_manifesto.tex`
+
+---
+
+## ♻️ Module M02 — Entropy as a Fractal Organizing Vector
+
+> “Entropy is not disorder. It is recursive possibility folding into form.”
+
+🔗 **[M02 DOI — Zenodo](https://doi.org/10.5281/zenodo.16541976)**  
+📄 `sections/M02_entropy_fractal_vector.tex`
+
+---
+
+## 📁 Repository Structure
+
+```bash
 .
-├── README.md                 # This file (umbrella overview)
-├── LICENSE                   # MIT for code; see licensing notes below
-├── CITATION.cff              # Citation metadata (umbrella)
-├── sections/                 # Philosophical manuscript sections (root scope)
-├── appendices/               # Optional philosophical appendices (root scope)
-├── references.bib            # Bibliography for the conceptual manuscript (root)
-└── NHB_Symbolic_Mainfold/    # Computational subproject (NHB-oriented)
-    ├── README.md             # Technical guide (install, run, cite)
-    ├── notebooks/            # 01..06 NHB-aligned notebooks
-    ├── data/                 # inputs/outputs; raw/ via OSF DOI
-    ├── results/              # figures and derived artifacts
-    ├── scripts/              # utils.py, reset_env.sh, clean_and_commit.sh
-    ├── NHB_main.tex          # NHB LaTeX manuscript (subproject scope)
-    ├── sections/             # NHB manuscript sections (subproject scope)
-    └── supplementary.tex     # NHB supplement (subproject scope)
+├── sections/                 # Modular .tex files (Introduction, Results, Interludes, etc.)
+├── appendices/              # Visuals, equations, glossary
+├── code/                    # Simulations, models, symbolic field visualizations
+├── M01_context_manifesto.tex
+├── references.bib
+├── main_modular_clean.tex
+├── metadata.yaml
+├── CITATION.cff
+└── README.md
 ```
 
 ---
 
-## Code & Data (Pointers)
-- **Conceptual code** (if any) lives in `NHB_Symbolic_Mainfold/code/` or is embedded in notebooks under `NHB_Symbolic_Mainfold/notebooks/`.  
-- **Data** are referenced and documented in the subproject’s README:  
-  - OSF: **10.17605/OSF.IO/2AQP7** (download instructions there).  
-- **Figures** generated by the pipeline are saved to `NHB_Symbolic_Mainfold/results/`.
+## 🔬 Future Modules
+
+| Module | Title | Description |
+|--------|-------|-------------|
+| `M01_context` | Foundational Manifesto | Ontological and symbolic foundation |
+| `M02_secaoX` | Section refinements | Recursive rewriting of core symbolic sections |
+| `M03_modelo_mat` | Mathematical formalization | Symbolic Schrödinger and entropy dynamics |
+| `M04_simulacoes` | Visual simulations | Monte Carlo, recursive symbolic fields |
+| `M05_dados_empiricos` | Neuroscientific parallels | Cortical fractality, giftedness patterns |
+| `M06_interface_superdotacao` | Paradigm shift proposal | Giftedness as symbolic singularity |
+| `M07_dialogos` | Registered dialogues | Symbolic-metacognitive logs |
+| `M08_publicacao` | Final assembly | Q1 submission draft and argumentation layer |
 
 ---
 
-## How to Cite
+## 🖋️ Author and License
 
-**(A) Conceptual umbrella (this repository):**
-> Agourakis DC. *Symbolic Manifolds and Entropic Dynamics: A Cognitive Topology of Mental States*. Zenodo; 2025. DOI: 10.5281/zenodo.16730036.
-
-**(B) Computational subproject (code) — NHB_Symbolic_Mainfold:**
-> Agourakis DC. *Symbolic Manifolds — NHB Computational Package (Notebooks 01–06)*. Zenodo; 2025. DOI: 10.5281/zenodo.16752238.
-
-**(C) Data archive (OSF):**
-> OSF Project. DOI: 10.17605/OSF.IO/2AQP7.
-
-You may also export BibTeX/APA from the Zenodo and OSF landing pages.
-
----
-
-## Licensing
-This repository is **dual-licensed** to reflect different artifact types:
-
-- **Code** (Python, notebooks, scripts): **MIT License** (see `LICENSE`).  
-- **Text, LaTeX sources, and figures** (unless otherwise stated): **CC BY 4.0**.  
-- **Data**: as specified in the OSF entry (see the OSF DOI above).
-
-> When reusing materials, please credit appropriately and ensure license compatibility.
-
----
-
-## Contact
-Email: [demetrios@agourakis.med.br](mailto:demetrios@agourakis.med.br)  
-ORCID: [0000-0002-8596-5097](https://orcid.org/0000-0002-8596-5097)
-
----
-*Developed as part of the modular research platform “The Fractal Nature of an Entropically-Driven Society”.*
+**Author:** Demetrios Chiuratto Agourakis  
+**ORCID:** [0000-0002-8596-5097](https://orcid.org/0000-0002-8596-5097)  
+**Affiliation:** Pontifícia Universidade Católica de São Paulo (PUC-SP)  
+**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)

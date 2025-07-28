@@ -11,13 +11,14 @@ creators:
     email: demetrios@agourakis.med.br
 
 keywords:
-  - fractal cognition
   - symbolic entropy
+  - fractal cognition
+  - recursive neurodynamics
   - giftedness
-  - epistemology
-  - recursive systems
-  - meta-consciousness
-  - philosophical systems theory
+  - trauma modeling
+  - symbolic systems theory
+  - entropic psychiatry
+  - philosophical complexity
 
 license: "CC-BY-4.0"
 access_right: open
@@ -29,3 +30,8 @@ related_identifiers:
     identifier: https://doi.org/10.5281/zenodo.16533374
   - relation: isIdenticalTo
     identifier: https://doi.org/10.5281/zenodo.16541976
+
+version: M02_v1
+
+notes: >
+  This submission is part of a modular series of symbolic-scientific manuscripts exploring the entropic geometry of cognition, society, and giftedness.
