@@ -1,6 +1,6 @@
 # 🧠 The Fractal Nature of an Entropically-Driven Society
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.TODO.svg)](https://doi.org/10.5281/zenodo.TODO)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16533374.svg)](https://doi.org/10.5281/zenodo.16533374)
 
 > A symbolic-cognitive and mathematical exploration of societal organization under recursive entropic tension.
 
@@ -25,7 +25,7 @@ The work is developed in modular stages, each published with its own DOI, source
 
 > “This text is not a theory. It is society folding into language. It breathes.”
 
-🔗 **[M01 DOI (awaiting community validation)](https://doi.org/10.5281/zenodo.TODO)**  
+🔗 **[M01 DOI (awaiting community validation)](https://doi.org/10.5281/zenodo.16533374)**  
 📄 `sections/M01_context_manifesto.tex`
 
 ---
