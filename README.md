@@ -30,6 +30,15 @@ The work is developed in modular stages, each published with its own DOI, source
 
 ---
 
+## ♻️ Module M02 — Entropy as a Fractal Organizing Vector
+
+> “Entropy is not disorder. It is recursive possibility folding into form.”
+
+🔗 **[M02 DOI — Zenodo](https://doi.org/10.5281/zenodo.16541976)**  
+📄 `sections/M02_entropy_fractal_vector.tex`
+
+---
+
 ## 📁 Repository Structure
 
 ```bash
