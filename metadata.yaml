@@ -1,18 +1,14 @@
-
-title: "M01_context — Foundational Manifesto of the Fractally Entropic Inquiry"
+title: "M02_entropy_vector — Entropy as a Fractal Organizing Vector"
 upload_type: publication
 publication_type: other
 description: |
-  This document inaugurates the theoretical foundation of the project 'The Fractal Nature of an Entropically-Driven Society'. 
-  It outlines the ontological, symbolic, and epistemological premises that guide the fractal-entropic hypothesis of human cognition and symbolic behavior. 
-  The manifesto is not merely an introduction — it is a fractal embodiment of the recursive system it describes, bridging symbolic density, entropy, giftedness, and epistemic rupture.
-
-  Authored by Demetrios Chiuratto Agourakis, this foundational document is to be cited as the generative seed of the entire research ecosystem, with all subsequent modules (mathematical models, simulations, symbolic expansions) recursively grounded upon its content.
+  This second modular entry deepens the symbolic, clinical, and topological framing of entropy as a fractal organizing vector. It articulates how recursive entropy dynamics manifest in trauma, giftedness, psychiatric collapse, and symbolic cognition. Module M02 sets the stage for formal modeling (M03) by integrating phenomenological, neurobiological, and thermodynamic dimensions of symbolic behavior.
 
 creators:
   - name: "Demetrios Chiuratto Agourakis"
-    affiliation: "São Leopoldo Mandic School of Medicine, Campinas, Brazil"
+    affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
     orcid: "0000-0002-8596-5097"
+    email: demetrios@agourakis.med.br
 
 keywords:
   - fractal cognition
@@ -26,3 +22,10 @@ keywords:
 license: "CC-BY-4.0"
 access_right: open
 language: eng
+
+doi: 10.5281/zenodo.16541976
+related_identifiers:
+  - relation: isPartOf
+    identifier: https://doi.org/10.5281/zenodo.16533374
+  - relation: isIdenticalTo
+    identifier: https://doi.org/10.5281/zenodo.16541976
