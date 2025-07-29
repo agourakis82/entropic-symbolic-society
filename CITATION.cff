@@ -1,21 +1,16 @@
 cff-version: 1.2.0
-title: "Symbolic Manifolds and Entropic Dynamics: A Cognitive Topology of Mental States"
-version: "v1.6"
-doi: "10.5281/zenodo.16783257"
-date-released: "2025-08-08"
+message: "If you use this work, please cite it as below."
+title: "Symbolic Modeling of Mental States: Entropic Dynamics, Tensorial Geometry, and Diagnostic Topology"
 authors:
   - family-names: "Agourakis"
-    given-names: "Demetrios"
-    orcid: "https://orcid.org/0000-0000-0000-0000"   # (se tiver)
+    given-names: "Demetrios Chiuratto"
+    orcid: "https://orcid.org/0000-0002-8596-5097"
+    affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
+date-released: 2025-07-29
+version: "M03_v1"
+license: "CC-BY-4.0"
+doi: "10.5281/zenodo.16550501"
 repository-code: "https://github.com/agourakis82/entropic-symbolic-society"
-license: "MIT"
-keywords:
-  - Cognitive Science
-  - Neuroscience
-  - Psycholinguistics
-  - Semantic Networks
-  - RSA
-  - fMRI
-  - EEG
-  - UMAP
-  - Entropy
+url: "https://zenodo.org/record/16550501"
+abstract: >
+  This module formalizes the symbolic modeling of mental states as recursive, entropically modulated configurations in a sociocultural manifold. It introduces novel constructs such as symbolic wavefunctions, curvature tensors, and diagnostic topologies to reinterpret psychiatric and cognitive singularities within a symbolic-physical framework. It constitutes the conceptual core of the project “The Fractal Nature of an Entropically-Driven Society” and prepares the ground for computational epistemology in M04.
