@@ -35,3 +35,42 @@ version: M02_v1
 
 notes: >
   This submission is part of a modular series of symbolic-scientific manuscripts exploring the entropic geometry of cognition, society, and giftedness.
+
+---
+title: "M03_symbolic_modeling — Symbolic Modeling of Mental States: Entropic Dynamics, Tensorial Geometry, and Diagnostic Topology"
+upload_type: publication
+publication_type: other
+description: |
+  This third modular entry formalizes the symbolic modeling of mental states as recursive, entropically modulated configurations within a socio-symbolic manifold. It introduces symbolic wavefunctions, tensorial curvature, and diagnostic topology as tools to reinterpret psychiatric states, giftedness, and singularities of cognition. M03 serves as the conceptual core of the entropic-symbolic project and prepares the epistemological basis for computational modeling in M04.
+
+creators:
+  - name: "Demetrios Chiuratto Agourakis"
+    affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
+    orcid: "0000-0002-8596-5097"
+    email: demetrios@agourakis.med.br
+
+keywords:
+  - symbolic modeling
+  - entropy and cognition
+  - tensorial psychiatry
+  - Schrödinger symbolic dynamics
+  - diagnostic topology
+  - giftedness
+  - symbolic phase space
+  - entropic recursion
+
+license: "CC-BY-4.0"
+access_right: open
+language: eng
+
+doi: 10.5281/zenodo.16550501
+related_identifiers:
+  - relation: isPartOf
+    identifier: https://doi.org/10.5281/zenodo.16533374
+  - relation: isIdenticalTo
+    identifier: https://doi.org/10.5281/zenodo.16550501
+
+version: M03_v1
+
+notes: >
+  This entry completes the symbolic formalism initiated in M02 and lays the structural groundwork for computational epistemology in M04. It is part of a modular series archived under the entropic-symbolic-society project.
