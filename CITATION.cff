@@ -7,10 +7,10 @@ authors:
     orcid: "https://orcid.org/0000-0002-8596-5097"
     affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
 date-released: 2025-07-29
-version: "M04_v1"
+version: "M04_v1.1"
 license: "CC-BY-4.0"
 doi: "10.5281/zenodo.16593503"
 repository-code: "https://github.com/agourakis82/entropic-symbolic-society"
 url: "https://zenodo.org/record/16593503"
 abstract: >
-  This module expands the theoretical framework of symbolic epistemology by introducing formal metrics for epistemic anchoring (α), symbolic curvature (κ), and recursive entropy (𝓔ᵣ). Through topological data analysis and predictive symbolic modeling, it constructs a dynamic manifold of cognition, capable of representing mental phase states, cognitive singularities, and bifurcations. It provides the formal backbone of the symbolic diagnostic theory and computational cartography proposed in the overarching fractal-entropy project.
+  This revised version incorporates all editorial recommendations following an internal peer review modeled after *Nature Human Behaviour*. The module deepens its theoretical articulation of symbolic epistemology by introducing simulations of symbolic bifurcation, diagnostic typologies of cognitive singularities (e.g., insight, psychosis, identity collapse), and cartographic modeling via TDA. Together, these layers solidify the module as a computational and epistemic backbone for mapping fractal cognition.
