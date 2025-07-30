@@ -1,20 +1,26 @@
-# Envs e caches
-.venv/
-env*/
-clean_env/
-**/__pycache__/
-**/.ipynb_checkpoints/
-# LaTeX temporários
-*.aux *.bbl *.blg *.log *.out
-# IDE
-.vscode/
-# Dados brutos (ficam no OSF)
-NHB_Symbolic_Mainfold/data/raw/
-# LaTeX temp files
+
+# LaTeX
 *.aux
+*.log
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
 *.bbl
 *.blg
-*.log
-*.out
-*.toc
-*.synctex.gz
+
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.ipynb_checkpoints
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
