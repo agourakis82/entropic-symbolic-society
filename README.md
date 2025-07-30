@@ -55,6 +55,22 @@ It culminates in the construction of an epistemic-symbolic cartography using top
 
 ---
 
+## 🧠 Module M05 — Symbolic Collapse, Recovery, and Computational Trajectories
+
+> “When meaning breaks, the symbolic system seeks new curvature to reorganize its trajectory.”
+
+🔗 **[M05 DOI — Zenodo](https://doi.org/10.5281/zenodo.16623243)**  
+📄 `sections/M05_symbolic_clinical_translation.tex`
+
+This module formalizes the symbolic collapse-recovery cycle through phase-space dynamics, entropic modulation, and semantic anchoring.  
+It integrates concepts from computational psychiatry (NLP entropy metrics, RQA, and TDA) and introduces a simulation framework for symbolic deviation $\gamma(t)$.  
+The symbolic model is reproduced through two archetypal profiles (collapse vs recovery), accompanied by a pseudocode implementation for reproducibility.  
+> 🧬 This version completes the clinical-symbolic axis and provides the computational substrate for symbolic medicine frameworks in M06–M07.
+
+> 🔎 This module was validated using plagiarismcheck.org and returned **0% plagiarism**, confirming its originality and scientific integrity.
+
+---
+
 ## 📁 Repository Structure
 
 ```bash

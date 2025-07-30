@@ -113,3 +113,42 @@ version: M04_v1.2
 
 notes: >
   This entry finalizes the epistemological architecture of the entropic-symbolic-society project and bridges into computational cognitive modeling. It includes formal diagnostics, symbolic forecasting, topological representations of cognitive singularities, and culminates with the foundational epistemic thesis that cognition is recursive navigation through a curved semantic manifold.
+
+---
+title: "M05_symbolic_clinical_translation — Symbolic Collapse, Recovery, and Computational Trajectories in Clinical Psychiatry"
+upload_type: publication
+publication_type: other
+description: |
+  This module introduces a symbolic-clinical framework for understanding psychiatric collapse and reorganization through the lens of entropic dynamics. It incorporates formal models of symbolic deviation γ(t), entropic curvature (κ), anchoring coefficients (α), and recovery vectors in phase space. The work integrates deep clinical phenomenology with computational psychiatry, including NLP-based entropy metrics, recurrence quantification, and topological state transitions. The module closes with an implemented simulation and pseudocode to illustrate the dynamical modeling of symbolic states in high-entropy conditions.
+
+creators:
+  - name: "Demetrios Chiuratto Agourakis"
+    affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
+    orcid: "0000-0002-8596-5097"
+    email: demetrios@agourakis.med.br
+
+keywords:
+  - symbolic psychiatry
+  - entropy in clinical states
+  - collapse and recovery
+  - symbolic deviation γ(t)
+  - computational clinical modeling
+  - NLP in psychiatry
+  - entropic curvature
+  - phase-space trajectories
+
+license: "CC-BY-4.0"
+access_right: open
+language: eng
+
+doi: 10.5281/zenodo.16623243
+related_identifiers:
+  - relation: isPartOf
+    identifier: https://doi.org/10.5281/zenodo.16533374
+  - relation: isIdenticalTo
+    identifier: https://doi.org/10.5281/zenodo.16623243
+
+version: M05_v1
+
+notes: >
+  This fifth module closes the symbolic-clinical translation arc of the entropic-symbolic project, integrating computational psychiatry, phase-state dynamics, and symbolic formalism into a reproducible model of epistemic disintegration and repair.
