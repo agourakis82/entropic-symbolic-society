@@ -39,6 +39,19 @@ The work is developed in modular stages, each published with its own DOI, source
 
 ---
 
+## 🧠 Module M04 — Symbolic Epistemology and Recursive Cognition
+
+> “Anchoring is what prevents symbolic collapse. Curvature is what lets it explore. Entropy is what makes it evolve.”
+
+🔗 **[M04 DOI — Zenodo](https://doi.org/10.5281/zenodo.16593503)**  
+📄 `sections/M04_symbolic_epistemology.tex`
+
+This module expands the theoretical framework of symbolic epistemology by introducing formal metrics for epistemic anchoring (α), symbolic curvature (κ), and recursive entropy (𝓔ᵣ).  
+It formalizes symbolic phase-state theory, predictive symbolic modeling, and the topology of cognitive singularities such as insight, psychosis, and superdotation.  
+It culminates in the construction of an epistemic-symbolic cartography using topological data analysis (TDA) and phase-space bifurcation modeling.
+
+---
+
 ## 📁 Repository Structure
 
 ```bash

@@ -74,3 +74,42 @@ version: M03_v1
 
 notes: >
   This entry completes the symbolic formalism initiated in M02 and lays the structural groundwork for computational epistemology in M04. It is part of a modular series archived under the entropic-symbolic-society project.
+
+---
+title: "M04_symbolic_epistemology — Symbolic Epistemology and Recursive Cognition: Anchoring, Entropy, and Topological Dynamics"
+upload_type: publication
+publication_type: other
+description: |
+  This fourth modular entry expands the theoretical framework of symbolic epistemology by introducing formal metrics for epistemic anchoring (α), symbolic curvature (κ), and recursive entropy (𝓔ᵣ). Through topological data analysis and predictive symbolic modeling, it constructs a dynamic manifold of cognition, capable of representing mental phase states, cognitive singularities, and bifurcations. It provides the formal backbone of the symbolic diagnostic theory and computational cartography proposed in the overarching fractal-entropy project.
+
+creators:
+  - name: "Demetrios Chiuratto Agourakis"
+    affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
+    orcid: "0000-0002-8596-5097"
+    email: demetrios@agourakis.med.br
+
+keywords:
+  - symbolic epistemology
+  - recursive entropy
+  - epistemic anchoring
+  - symbolic curvature
+  - topological cognition
+  - cognitive phase transitions
+  - TDA in psychiatry
+  - fractal diagnostic cartography
+
+license: "CC-BY-4.0"
+access_right: open
+language: eng
+
+doi: 10.5281/zenodo.16593503
+related_identifiers:
+  - relation: isPartOf
+    identifier: https://doi.org/10.5281/zenodo.16533374
+  - relation: isIdenticalTo
+    identifier: https://doi.org/10.5281/zenodo.16593503
+
+version: M04_v1
+
+notes: >
+  This entry finalizes the epistemological architecture of the entropic-symbolic-society project and bridges into computational cognitive modeling. It includes formal diagnostics, symbolic forecasting, and topological representations of cognitive singularities.
