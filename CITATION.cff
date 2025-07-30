@@ -1,16 +1,16 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
-title: "Symbolic Modeling of Mental States: Entropic Dynamics, Tensorial Geometry, and Diagnostic Topology"
+title: "Symbolic Epistemology and Recursive Cognition: Anchoring, Entropy, and Topological Dynamics"
 authors:
   - family-names: "Agourakis"
     given-names: "Demetrios Chiuratto"
     orcid: "https://orcid.org/0000-0002-8596-5097"
     affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
 date-released: 2025-07-29
-version: "M03_v1"
+version: "M04_v1"
 license: "CC-BY-4.0"
-doi: "10.5281/zenodo.16567866"
+doi: "10.5281/zenodo.16593503"
 repository-code: "https://github.com/agourakis82/entropic-symbolic-society"
-url: "https://zenodo.org/record/16567866"
+url: "https://zenodo.org/record/16593503"
 abstract: >
-  This module formalizes the symbolic modeling of mental states as recursive, entropically modulated configurations in a sociocultural manifold. It introduces novel constructs such as symbolic wavefunctions, curvature tensors, and diagnostic topologies to reinterpret psychiatric and cognitive singularities within a symbolic-physical framework. It constitutes the conceptual core of the project “The Fractal Nature of an Entropically-Driven Society” and prepares the ground for computational epistemology in M04.
+  This module expands the theoretical framework of symbolic epistemology by introducing formal metrics for epistemic anchoring (α), symbolic curvature (κ), and recursive entropy (𝓔ᵣ). Through topological data analysis and predictive symbolic modeling, it constructs a dynamic manifold of cognition, capable of representing mental phase states, cognitive singularities, and bifurcations. It provides the formal backbone of the symbolic diagnostic theory and computational cartography proposed in the overarching fractal-entropy project.
