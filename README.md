@@ -43,13 +43,13 @@ The work is developed in modular stages, each published with its own DOI, source
 
 > “Anchoring is what prevents symbolic collapse. Curvature is what lets it explore. Entropy is what makes it evolve.”
 
-🔗 **[M04 DOI — Zenodo](https://doi.org/10.5281/zenodo.16593503)**  
+🔗 **[M04 DOI — Zenodo](https://doi.org/10.5281/zenodo.16619481)**  
 📄 `sections/M04_symbolic_epistemology.tex`
 
 This module expands the theoretical framework of symbolic epistemology by introducing formal metrics for epistemic anchoring (α), symbolic curvature (κ), and recursive entropy (𝓔ᵣ).  
 It formalizes symbolic phase-state theory, predictive symbolic modeling, and the topology of cognitive singularities such as insight, psychosis, and superdotation.  
 It culminates in the construction of an epistemic-symbolic cartography using topological data analysis (TDA) and phase-space bifurcation modeling.  
-> 🧾 This revised version (M04_v1.1) incorporates all suggestions from internal peer review modeled after *Nature Human Behaviour*, including clinical simulations, topological mappings, and full typologies of symbolic singularities.
+> 🧾 This revised version (M04_v1.2, DOI [10.5281/zenodo.16619481](https://doi.org/10.5281/zenodo.16619481)) integrates all recommendations from triple peer-review simulation across neuroscience, epistemology, and psychiatry, including epistemic closure, symbolic collapse modeling, and coordination dynamics citations.
 
 > 🔎 This module was validated using plagiarismcheck.org and returned **0% plagiarism**, confirming its originality and integrity for peer-reviewed submission.
 

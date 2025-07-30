@@ -80,7 +80,7 @@ title: "M04_symbolic_epistemology — Symbolic Epistemology and Recursive Cognit
 upload_type: publication
 publication_type: other
 description: |
-  This fourth modular entry expands the theoretical framework of symbolic epistemology by introducing formal metrics for epistemic anchoring (α), symbolic curvature (κ), and recursive entropy (𝓔ᵣ). Through topological data analysis and predictive symbolic modeling, it constructs a dynamic manifold of cognition, capable of representing mental phase states, cognitive singularities, and bifurcations. It provides the formal backbone of the symbolic diagnostic theory and computational cartography proposed in the overarching fractal-entropy project.
+  This revised version incorporates all editorial recommendations following an internal peer review modeled after *Nature Human Behaviour*. The module deepens its theoretical articulation of symbolic epistemology by introducing simulations of symbolic bifurcation, diagnostic typologies of cognitive singularities (e.g., insight, psychosis, identity collapse), and cartographic modeling via TDA. Together, these layers solidify the module as a computational and epistemic backbone for mapping fractal cognition.
 
 creators:
   - name: "Demetrios Chiuratto Agourakis"
@@ -102,14 +102,14 @@ license: "CC-BY-4.0"
 access_right: open
 language: eng
 
-doi: 10.5281/zenodo.16593503
+doi: 10.5281/zenodo.16619481
 related_identifiers:
   - relation: isPartOf
     identifier: https://doi.org/10.5281/zenodo.16533374
   - relation: isIdenticalTo
-    identifier: https://doi.org/10.5281/zenodo.16593503
+    identifier: https://doi.org/10.5281/zenodo.16619481
 
-version: M04_v1
+version: M04_v1.2
 
 notes: >
-  This entry finalizes the epistemological architecture of the entropic-symbolic-society project and bridges into computational cognitive modeling. It includes formal diagnostics, symbolic forecasting, and topological representations of cognitive singularities.
+  This entry finalizes the epistemological architecture of the entropic-symbolic-society project and bridges into computational cognitive modeling. It includes formal diagnostics, symbolic forecasting, topological representations of cognitive singularities, and culminates with the foundational epistemic thesis that cognition is recursive navigation through a curved semantic manifold.
