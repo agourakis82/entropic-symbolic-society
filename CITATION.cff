@@ -7,10 +7,10 @@ authors:
     orcid: "https://orcid.org/0000-0002-8596-5097"
     affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
 date-released: 2025-07-29
-version: "M04_v1.1"
+version: "M04_v1.2"
 license: "CC-BY-4.0"
-doi: "10.5281/zenodo.16593503"
+doi: "10.5281/zenodo.16619481"
 repository-code: "https://github.com/agourakis82/entropic-symbolic-society"
-url: "https://zenodo.org/record/16593503"
+url: "https://zenodo.org/record/16619481"
 abstract: >
-  This revised version incorporates all editorial recommendations following an internal peer review modeled after *Nature Human Behaviour*. The module deepens its theoretical articulation of symbolic epistemology by introducing simulations of symbolic bifurcation, diagnostic typologies of cognitive singularities (e.g., insight, psychosis, identity collapse), and cartographic modeling via TDA. Together, these layers solidify the module as a computational and epistemic backbone for mapping fractal cognition.
+  This version incorporates all recommendations from a triple peer-review simulation across neuroscience, epistemology, and psychiatry. It finalizes the symbolic epistemology framework by modeling recursive collapse, defining diagnostic typologies, and proposing recovery dynamics under topological constraints. The closing thesis formalizes knowledge as recursive navigation through a curved semantic manifold—operationalized via the symbolic triad $(\alpha, \kappa, \mathcal{E}_r)$—anchoring the entropic-symbolic model in epistemic topology.

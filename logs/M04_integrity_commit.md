@@ -7,7 +7,7 @@
 **Author:** Demetrios Agourakis  
 **Repository:** entropic-symbolic-society  
 **Module:** M04 — Symbolic Epistemology and Cognitive Geometry  
-**DOI:** [10.5281/zenodo.16593503](https://doi.org/10.5281/zenodo.16593503)
+**DOI:** [10.5281/zenodo.16619481](https://doi.org/10.5281/zenodo.16619481)
 
 ---
 
@@ -73,4 +73,22 @@ Following a rigorous internal peer review modeled after *Nature Human Behaviour*
 - 📍 Section 4.4.4 — Specified potential visualization tools and mapping strategies using UMAP, TDA, and symbolic embeddings.
 - 📚 All citations validated: `blackburn2015telomeres`, `baum2017twiceexceptional`, `neihart2002profiles`, `gergen2009narrative`, `lopezotin2013hallmarks`.
 
-✅ This version (M04_v1.1) is now fully aligned with submission expectations of Q1 journals and Zenodo archival guidelines.
+
+---
+
+## 🧠 Final Review Summary — M04_v1.2 (2025-07-31)
+
+This version integrates a triple peer-review simulation across three disciplinary domains:
+
+- 🧬 Neuroscience and computational dynamics  
+- 📚 Philosophy of mind and symbolic epistemology  
+- 🧠 Translational psychiatry and diagnostic modeling  
+
+### Revisions included:
+- Addition of formal epistemic closure in Section 4.6  
+- Integration of three advanced citations:  
+  `kelso2006coordination`, `rabinovich2012dynamical`, `stephan2016dysconnection`  
+- Completion of recursive collapse modeling with simulation hooks for M05  
+- Validation of all citations and structural continuity  
+
+✅ Status: READY for public DOI upload and editorial submission targeting Q1 journals.
