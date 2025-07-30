@@ -6,11 +6,11 @@ authors:
     given-names: "Demetrios Chiuratto"
     orcid: "https://orcid.org/0000-0002-8596-5097"
     affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
-date-released: 2025-07-29
-version: "M04_v1.2"
+date-released: 2025-07-30
+version: "M05_v1.0"
 license: "CC-BY-4.0"
-doi: "10.5281/zenodo.16619481"
+doi: "10.5281/zenodo.16623243"
 repository-code: "https://github.com/agourakis82/entropic-symbolic-society"
-url: "https://zenodo.org/record/16619481"
+url: "https://zenodo.org/record/16623243"
 abstract: >
-  This version incorporates all recommendations from a triple peer-review simulation across neuroscience, epistemology, and psychiatry. It finalizes the symbolic epistemology framework by modeling recursive collapse, defining diagnostic typologies, and proposing recovery dynamics under topological constraints. The closing thesis formalizes knowledge as recursive navigation through a curved semantic manifold—operationalized via the symbolic triad $(\alpha, \kappa, \mathcal{E}_r)$—anchoring the entropic-symbolic model in epistemic topology.
+  Module M05 advances the entropic-symbolic framework into the domain of clinical application. It formalizes symbolic collapse and reconfiguration through the dynamic behavior of γ(t), introduces a phase-space description for symbolic instability, and integrates entropic metrics from computational psychiatry. The module includes a full simulation of symbolic trajectories under varying anchoring (α) and curvature (κ), with pseudocode for reproducibility. It marks the transition between theoretical formulation and symbolic medicine, opening the epistemic manifold to diagnostic and therapeutic modeling.

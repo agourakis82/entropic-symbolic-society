@@ -87,7 +87,22 @@ Importantly, recovery may produce novel configurations not isomorphic to the pre
 
 The vector $\vec{v}_{\text{recovery}}$ is thus not a return vector, but a curvature-aware field that guides subjects toward coherence, not conformity. Recovery is realignment in a revised narrative space—shaped by loss, integration, and emergent symbolic anchors.
  
+
 \subsection*{5.4.1 Pharmacological Modulation of Symbolic Dynamics}
+ 
+\subsection*{5.5 Computational Symbolic Psychiatry}
+
+Recent advances in computational psychiatry propose that symbolic collapse and recovery can be formally tracked using quantifiable features extracted from language, neural oscillations, and cognitive phase behavior. Natural language processing (NLP), Topological Data Analysis (TDA), and Recurrence Quantification Analysis (RQA) allow symbolic manifolds to be not only theorized, but empirically measured.
+
+\textbf{Entropy metrics} such as Approximate Entropy (ApEn) and Multi-Scale Entropy (MSE) have been used to assess semantic disorganization in conditions like schizophrenia and depression. Patients with high symbolic entropy often exhibit lexical dispersion, weakened topic recurrence, and disruption of temporal structure in narrative production (Wolfson et al., 2024; Zhang et al., 2022)\cite{Wolfson2024, Zhang2022}. 
+
+\textbf{RQA techniques} allow symbolic recursions in language to be modeled as dynamical systems. When applied to patient narratives, increases in recurrence indices over therapy correlate with subjective symptom relief (Lyby et al., 2019)\cite{Lyby2019}. Thus, changes in $\mathcal{E}_r$ and $\alpha$ can be tracked as markers of symbolic reintegration.
+
+\textbf{Topological analysis} of fMRI data using TDA (Saggar et al., 2022)\cite{Saggar2022} reveals cognitive state transitions as flows through attractor-rich manifolds. In psychiatric populations, such manifolds may fragment, flatten, or shift their hubs—corresponding to alterations in symbolic vector fields. Combining TDA with linguistic phase diagnostics could enable real-time identification of phase instability.
+
+Together, these tools operationalize symbolic geometry. They suggest that symbolic medicine could be guided by data-driven phase navigation—tracking when $\gamma(t)$ enters bifurcation zones, how $\vec{v}_{\text{collapse}}$ and $\vec{v}_{\text{recovery}}$ shift under therapeutic intervention, and when $\mathcal{E}_r$ modulation predicts transformation.
+
+These insights support the design of symbolic instrumentation: software that maps the topology of patient narratives, detects pre-collapse curvature, and helps design personalized epistemic interventions based on dynamic feedback.
 
 Psychopharmacological agents exert their effects not merely by symptom suppression, but through modulation of the underlying symbolic manifold. Within our triadic model $(\alpha, \kappa, \mathcal{E}_r)$, distinct classes of compounds can be interpreted as reshaping the topology of cognitive trajectories.
 
@@ -101,7 +116,74 @@ Psychedelics, paradoxically, increase $\kappa$ and $\mathcal{E}_r$ transiently, 
 
 Hence, pharmacological interventions should not be framed as unidimensional dampeners of symptoms, but as modulators of symbolic vector fields. Their efficacy depends on contextual scaffolding—psychotherapy, narrative framing, and intersubjective validation—that transforms neurochemical modulation into lasting topological shifts in cognition and meaning.
 
+
 \subsection*{5.5 Toward Symbolic Instrumentation and Diagnostic Topologies}
+
+
+\subsection*{5.6 Simulated Symbolic Trajectories}
+
+To illustrate the dynamic behavior of symbolic deviation $\gamma(t)$ under different epistemic configurations, we simulated two symbolic trajectories governed by the expression:
+
+\begin{equation}
+\gamma(t) = e^{-\alpha t} \cdot \sin(\kappa t)
+\end{equation}
+
+where:
+\begin{itemize}
+  \item $\alpha$ represents the anchoring coefficient (symbolic stability or epistemic memory);
+  \item $\kappa$ denotes symbolic curvature (semantic divergence or disintegration pressure).
+\end{itemize}
+
+Two contrasting profiles were simulated:
+
+\begin{enumerate}
+  \item \textbf{Collapse profile}: $\alpha = 0.4$, $\kappa = 3.0$ — rapid symbolic oscillations with poor damping, modeling a system with low epistemic anchoring and high disorganization.
+  \item \textbf{Recovery profile}: $\alpha = 1.2$, $\kappa = 0.7$ — smooth symbolic re-integration with strong damping, modeling resilient recovery with semantic coherence.
+\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figs/simulated_gamma_trajectories.pdf}
+  \caption{Simulated symbolic deviation $\gamma(t)$ under two epistemic configurations. The collapse profile (red) exhibits disorganized, unstable behavior. The recovery profile (green) shows coherent symbolic re-anchoring.}
+  \label{fig:gamma_simulation}
+\end{figure}
+
+These simulations help visualize how symbolic systems evolve in time depending on their semantic curvature and memory. The method suggests that symbolic collapse and recovery could be quantitatively modeled in clinical narratives and linguistic data using time-dependent entropic metrics and phase space flows.
+
+This model also opens the path for future extensions with stochastic noise, attractor detection, and dynamic bifurcation mapping across individual narrative profiles.
+
+
+\subsection*{5.7 Pseudocode for Symbolic Simulation}
+
+To foster reproducibility and enable integration into clinical-symbolic instrumentation, we include a simplified Python pseudocode representing the simulation of symbolic deviation $\gamma(t)$ under different parameter regimes:
+
+\begin{lstlisting}[language=Python, caption={Simulation of $\gamma(t)$ for symbolic collapse and recovery}, label={lst:gamma_simulation}]
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Time vector
+t = np.linspace(0, 10, 500)
+
+# Profile 1 — Collapse: low anchoring, high curvature
+alpha_1, kappa_1 = 0.4, 3.0
+gamma1 = np.exp(-alpha_1 * t) * np.sin(kappa_1 * t)
+
+# Profile 2 — Recovery: strong anchoring, mild curvature
+alpha_2, kappa_2 = 1.2, 0.7
+gamma2 = np.exp(-alpha_2 * t) * np.sin(kappa_2 * t)
+
+# Plot both symbolic trajectories
+plt.plot(t, gamma1, label="Collapse", color="red")
+plt.plot(t, gamma2, label="Recovery", color="green")
+plt.xlabel("Time (t)")
+plt.ylabel("Symbolic Deviation γ(t)")
+plt.title("Simulated γ(t): Collapse vs Recovery")
+plt.legend()
+plt.grid(True)
+plt.show()
+\end{lstlisting}
+
+This pseudocode illustrates the symbolic differential decay of anchoring and the oscillatory behavior of curvature in the symbolic manifold. It can be extended to model real narrative data using NLP-derived time series and mapped into $(\alpha, \kappa, \mathcal{E}_r)$ coordinates.
 
 \subsection*{5.6 Conclusion — Toward a Symbolic Clinical Geometry}
 
