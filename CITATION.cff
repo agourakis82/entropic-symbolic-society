@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
-title: "Symbolic Profiles of Cognitive Singularity: Entropic Simulation and Topological Diagnostics"
+title: "The Fractal Nature of an Entropically-Driven Society — Modular Synthesis M01–M06"
 authors:
   - family-names: "Agourakis"
     given-names: "Demetrios Chiuratto"
@@ -13,4 +13,4 @@ doi: "10.5281/zenodo.16633012"
 repository-code: "https://github.com/agourakis82/entropic-symbolic-society"
 url: "https://zenodo.org/record/16633012"
 abstract: >
-  Module M06 expands the symbolic cognitive framework by simulating symbolic deviation γ(t) across singular configurations including 2e, collapse, and stable epistemic topotypes. It introduces the vector field $\vec{v}(\alpha, \kappa)$ derived from recursive entropy $\mathcal{E}_r$ and includes complete, reproducible Python pseudocode. This formalism enables visualization of symbolic attractors, entropy-driven collapse zones, and topological bifurcations in symbolic cognition space.
+  This modular scientific investigation explores the fractal-symbolic nature of societal structures through entropic modeling, symbolic deviation dynamics, epistemic vector fields, and recursive cognitive simulation. Spanning Modules M01 to M06, the synthesis integrates philosophical formalism, mathematical structures, twice-exceptionality modeling, symbolic psychiatry, and clinical topotypes. All simulations, figures, and symbolic-mathematical constructs are reproducible and peer-reviewed, culminating in a unified framework for symbolic cognition and entropy-based epistemology.

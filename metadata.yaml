@@ -180,12 +180,12 @@ license: "CC-BY-4.0"
 access_right: open
 language: eng
 
-doi: 10.5281/zenodo.16605353
+doi: 10.5281/zenodo.16633012
 related_identifiers:
   - relation: isPartOf
     identifier: https://doi.org/10.5281/zenodo.16533374
   - relation: isIdenticalTo
-    identifier: https://doi.org/10.5281/zenodo.16605353
+    identifier: https://doi.org/10.5281/zenodo.16633012
 
 version: M06_v1.1
 
