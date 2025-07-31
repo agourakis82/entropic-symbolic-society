@@ -200,56 +200,19 @@ To ensure full reproducibility and transparency, we include the Python code used
 
 \subsubsection*{6.9.1 Simulation of $\gamma(t)$ Across Three Symbolic Profiles}
 
-\begin{lstlisting}[language=Python, caption={Simulating symbolic deviation γ(t) for 2e, stable, and collapse profiles}, label={lst:gamma_simulation}]
-import numpy as np
-import matplotlib.pyplot as plt
+The following Python script simulates $\gamma(t)$ for three symbolic profiles: 2e, stable, and collapse. The original code block is available in the file:
 
-t = np.linspace(0, 10, 500)
+\texttt{code/gamma_profiles_simulation.py}
 
-def gamma(t, alpha, kappa, noise_amplitude=0.0):
-    noise = noise_amplitude * np.random.normal(0, 1, len(t))
-    return np.exp(-alpha * t) * np.sin(kappa * t) + noise
-
-gamma_2e = gamma(t, alpha=0.8, kappa=2.5, noise_amplitude=0.05)
-gamma_stable = gamma(t, alpha=1.5, kappa=0.5, noise_amplitude=0.01)
-gamma_collapse = gamma(t, alpha=0.3, kappa=3.5, noise_amplitude=0.15)
-
-plt.plot(t, gamma_2e, label="2e", color="orange")
-plt.plot(t, gamma_stable, label="Stable", color="green")
-plt.plot(t, gamma_collapse, label="Collapse", color="red")
-plt.xlabel("Time (t)")
-plt.ylabel("γ(t)")
-plt.legend()
-plt.grid(True)
-plt.show()
-\end{lstlisting}
+\verbatiminput{code/gamma_profiles_simulation.py}
 
 \subsubsection*{6.9.2 Symbolic Vector Field Based on Recursive Entropy}
 
-\begin{lstlisting}[language=Python, caption={Plotting the vector field $\vec{v}(\alpha, \kappa)$ derived from $\mathcal{E}_r = \kappa^2 / \alpha$}, label={lst:vector_field}]
-import numpy as np
-import matplotlib.pyplot as plt
+The following script plots the vector field $\vec{v}(\alpha, \kappa)$ derived from recursive entropy $\mathcal{E}_r = \kappa^2 / \alpha$:
 
-alpha = np.linspace(0.1, 2.0, 20)
-kappa = np.linspace(0.1, 4.0, 20)
-A, K = np.meshgrid(alpha, kappa)
+\texttt{code/vector_field_entropy.py}
 
-E_r = K**2 / A
-dE_dalpha = -K**2 / A**2
-dE_dkappa = 2 * K / A
-
-U = -dE_dalpha  # Flow in α
-V = dE_dkappa   # Flow in κ
-
-fig, ax = plt.subplots(figsize=(10, 6))
-strm = ax.streamplot(A, K, U, V, color=E_r, linewidth=1.2, cmap='plasma')
-plt.colorbar(strm.lines, ax=ax, label='Recursive Entropy E_r')
-ax.set_xlabel('α (Anchoring)')
-ax.set_ylabel('κ (Curvature)')
-plt.title('Symbolic Vector Field over Entropic Phase Space')
-plt.grid(True)
-plt.show()
-\end{lstlisting}
+\verbatiminput{code/vector_field_entropy.py}
 
 \bigskip
 \noindent
