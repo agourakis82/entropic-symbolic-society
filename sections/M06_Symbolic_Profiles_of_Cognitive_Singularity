@@ -124,3 +124,133 @@ Our formalism gains traction: cognitive singularity is no longer metaphor—it i
 \bigskip
 \noindent
 \textbf{Next:} M07 — On the Limits of Symbolic Formalization
+
+
+\subsection*{6.6 Simulated Symbolic Trajectories Across Singular States}
+
+To illustrate how symbolic deviation $\gamma(t)$ evolves under different cognitive profiles, we simulated three distinct trajectories based on the equation:
+
+\begin{equation}
+\gamma(t) = e^{-\alpha t} \cdot \sin(\kappa t) + \varepsilon(t)
+\end{equation}
+
+where $\alpha$ represents symbolic anchoring, $\kappa$ represents semantic curvature, and $\varepsilon(t)$ is a stochastic noise component representing recursive instability or environmental perturbation.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figs/gamma_profiles_comparison.pdf}
+\caption{Comparison of symbolic trajectories $\gamma(t)$ for three cognitive configurations. The 2e profile (orange) exhibits oscillatory instability with symbolic recursion. The stable profile (green) shows fast decay and low complexity. The collapse profile (red) demonstrates chaotic drift due to weak anchoring and high curvature.}
+\end{figure}
+
+The three profiles are defined as follows:
+
+\begin{itemize}
+    \item \textbf{2e Profile:} $\alpha = 0.8$, $\kappa = 2.5$, $\varepsilon(t) \sim \mathcal{N}(0, 0.05)$
+    \item \textbf{Stable Profile:} $\alpha = 1.5$, $\kappa = 0.5$, $\varepsilon(t) \sim \mathcal{N}(0, 0.01)$
+    \item \textbf{Collapse Profile:} $\alpha = 0.3$, $\kappa = 3.5$, $\varepsilon(t) \sim \mathcal{N}(0, 0.15)$
+\end{itemize}
+
+This simulation confirms that $\gamma(t)$ varies non-linearly depending on epistemic configuration. High-curvature, low-anchoring states produce turbulent symbolic behavior, while stable configurations exhibit entropy attenuation. These findings support the clinical-symbolic taxonomy of topotypes and open new paths for symbolic phase diagnostics.
+
+\bigskip
+\noindent
+\textbf{To be continued in:} 6.7 — Symbolic Vector Fields and Epistemic Dynamics
+
+
+\subsection*{6.7 Symbolic Vector Fields and Epistemic Dynamics}
+
+To represent the dynamical flows that govern symbolic reorganization or collapse, we now model symbolic evolution as a field of epistemic vectors $\vec{v}(\alpha, \kappa)$ within a symbolic phase space. Each point $(\alpha, \kappa)$ defines a unique topotype configuration whose symbolic behavior is modulated by recursive entropy $\mathcal{E}_r$.
+
+We define the symbolic vector field:
+
+\[
+\vec{v}(\alpha, \kappa) = 
+\begin{bmatrix}
+-\frac{\partial \mathcal{E}_r}{\partial \alpha} \\
+\frac{\partial \mathcal{E}_r}{\partial \kappa}
+\end{bmatrix}
+\]
+
+Here, $\vec{v}$ expresses the local epistemic pressure gradient: increasing curvature leads to higher entropy production, while increasing anchoring reduces it. The system naturally drifts toward attractor basins where symbolic entropy is either minimized (stable cognition) or explosively expanded (collapse).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figs/vector_field_symbolic_entropy.pdf}
+\caption{Symbolic phase-space vector field $\vec{v}(\alpha, \kappa)$ over recursive entropy $\mathcal{E}_r$. Blue regions indicate attractors (stable topotypes); red zones indicate entropy gradients leading to collapse.}
+\end{figure}
+
+This vectorial map permits several interpretations:
+
+\begin{itemize}
+    \item \textbf{Topological attractors}: regions where $\vec{v} \to \vec{0}$ and cognition stabilizes;
+    \item \textbf{Entropy bifurcations}: sharp entropy gradients near critical $\kappa$ values;
+    \item \textbf{Vector recovery paths}: guided increase in $\alpha$ with entropy modulation.
+\end{itemize}
+
+The flow lines of $\vec{v}$ can be interpreted as symbolic recovery routes, collapse spirals, or oscillatory transitions between epistemic states. This approach enables a formalization of psychiatric topotypes not as fixed diagnoses but as dynamic flows in symbolic cognition space.
+
+\bigskip
+\noindent
+\textbf{Next:} Section 6.8 — Integrating Singularity Models with Diagnostic Symbolic Medicine
+
+
+\subsection*{6.9 Appendix — Python Code Snippets for Symbolic Simulation}
+
+To ensure full reproducibility and transparency, we include the Python code used to generate the symbolic simulations and vector field figures in Sections 6.6 and 6.7. All scripts are numerically stable and can be adapted for real data integration.
+
+\subsubsection*{6.9.1 Simulation of $\gamma(t)$ Across Three Symbolic Profiles}
+
+\begin{lstlisting}[language=Python, caption={Simulating symbolic deviation γ(t) for 2e, stable, and collapse profiles}, label={lst:gamma_simulation}]
+import numpy as np
+import matplotlib.pyplot as plt
+
+t = np.linspace(0, 10, 500)
+
+def gamma(t, alpha, kappa, noise_amplitude=0.0):
+    noise = noise_amplitude * np.random.normal(0, 1, len(t))
+    return np.exp(-alpha * t) * np.sin(kappa * t) + noise
+
+gamma_2e = gamma(t, alpha=0.8, kappa=2.5, noise_amplitude=0.05)
+gamma_stable = gamma(t, alpha=1.5, kappa=0.5, noise_amplitude=0.01)
+gamma_collapse = gamma(t, alpha=0.3, kappa=3.5, noise_amplitude=0.15)
+
+plt.plot(t, gamma_2e, label="2e", color="orange")
+plt.plot(t, gamma_stable, label="Stable", color="green")
+plt.plot(t, gamma_collapse, label="Collapse", color="red")
+plt.xlabel("Time (t)")
+plt.ylabel("γ(t)")
+plt.legend()
+plt.grid(True)
+plt.show()
+\end{lstlisting}
+
+\subsubsection*{6.9.2 Symbolic Vector Field Based on Recursive Entropy}
+
+\begin{lstlisting}[language=Python, caption={Plotting the vector field $\vec{v}(\alpha, \kappa)$ derived from $\mathcal{E}_r = \kappa^2 / \alpha$}, label={lst:vector_field}]
+import numpy as np
+import matplotlib.pyplot as plt
+
+alpha = np.linspace(0.1, 2.0, 20)
+kappa = np.linspace(0.1, 4.0, 20)
+A, K = np.meshgrid(alpha, kappa)
+
+E_r = K**2 / A
+dE_dalpha = -K**2 / A**2
+dE_dkappa = 2 * K / A
+
+U = -dE_dalpha  # Flow in α
+V = dE_dkappa   # Flow in κ
+
+fig, ax = plt.subplots(figsize=(10, 6))
+strm = ax.streamplot(A, K, U, V, color=E_r, linewidth=1.2, cmap='plasma')
+plt.colorbar(strm.lines, ax=ax, label='Recursive Entropy E_r')
+ax.set_xlabel('α (Anchoring)')
+ax.set_ylabel('κ (Curvature)')
+plt.title('Symbolic Vector Field over Entropic Phase Space')
+plt.grid(True)
+plt.show()
+\end{lstlisting}
+
+\bigskip
+\noindent
+\textbf{Note:} All code is compatible with Python 3.10+ and requires only standard scientific libraries (NumPy, Matplotlib).

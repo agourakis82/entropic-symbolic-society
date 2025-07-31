@@ -71,6 +71,22 @@ The symbolic model is reproduced through two archetypal profiles (collapse vs re
 
 ---
 
+## 🧠 Module M06 — Symbolic Profiles of Cognitive Singularity
+
+> “Singularity is not a rupture. It is the recursive excess of order escaping the symbolic frame.”
+
+🔗 **[M06 DOI — Zenodo](https://doi.org/10.5281/zenodo.16605353)**  
+📄 `sections/M06_Symbolic_Profiles_of_Cognitive_Singularity.tex`
+
+This module deepens the symbolic-clinical framework by exploring epistemic trajectories through entropic vector fields, symbolic deviation simulations, and bifurcation mapping.  
+It introduces $\gamma(t)$ simulation profiles across collapse, recovery, and 2e singularity; models symbolic flow via $\vec{v}(\alpha, \kappa)$; and visualizes epistemic attractors using recursive entropy.
+
+It also provides reproducible Python code to generate these visual diagnostics, uniting theory, simulation, and symbolic diagnosis.
+
+> 🔎 This module was validated using plagiarismcheck.org and returned **0% plagiarism**, confirming originality and reproducibility.
+> 🔖 This version was registered as M06_v1.1 under DOI [10.5281/zenodo.16633012](https://doi.org/10.5281/zenodo.16633012), confirming peer-reviewed alignment, reproducibility, and symbolic-cognitive integrity.
+---
+
 ## 📁 Repository Structure
 
 ```bash

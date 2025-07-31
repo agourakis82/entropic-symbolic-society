@@ -152,3 +152,42 @@ version: M05_v1
 
 notes: >
   This fifth module closes the symbolic-clinical translation arc of the entropic-symbolic project, integrating computational psychiatry, phase-state dynamics, and symbolic formalism into a reproducible model of epistemic disintegration and repair.
+
+---
+title: "M06_symbolic_profiles — Symbolic Profiles of Cognitive Singularity: Entropic Simulation and Topological Diagnostics"
+upload_type: publication
+publication_type: other
+description: |
+  This sixth module deepens the entropic-symbolic framework by simulating symbolic trajectories and modeling epistemic singularities via vector fields in symbolic phase space. It introduces dynamic models of γ(t), collapse/recovery vectors, recursive entropy topographies, and diagnostic simulations of twice-exceptionality. The module includes reproducible Python code and formalizes epistemic attractors, bifurcations, and symbolic flow lines across anchoring and curvature gradients.
+
+creators:
+  - name: "Demetrios Chiuratto Agourakis"
+    affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
+    orcid: "0000-0002-8596-5097"
+    email: demetrios@agourakis.med.br
+
+keywords:
+  - symbolic dynamics
+  - cognitive singularity
+  - symbolic deviation γ(t)
+  - recursive entropy
+  - vector field cognition
+  - entropic attractors
+  - bifurcation states
+  - symbolic psychiatry
+
+license: "CC-BY-4.0"
+access_right: open
+language: eng
+
+doi: 10.5281/zenodo.16605353
+related_identifiers:
+  - relation: isPartOf
+    identifier: https://doi.org/10.5281/zenodo.16533374
+  - relation: isIdenticalTo
+    identifier: https://doi.org/10.5281/zenodo.16605353
+
+version: M06_v1.1
+
+notes: >
+  This module introduces dynamic symbolic simulation and epistemic field modeling, consolidating the symbolic diagnostic architecture of the entropic-symbolic-society project.
