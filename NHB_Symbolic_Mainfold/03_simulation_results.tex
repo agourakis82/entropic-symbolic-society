@@ -1,0 +1,19 @@
+\section*{3. Simulation Results}
+
+To evaluate the expressive capacity of the symbolic manifold $\mathbb{S}$, we conducted discrete-time simulations of trajectories $\gamma(t) = (\alpha(t), \kappa(t), E_r(t))$ under idealized initial conditions representative of four cognitive-symbolic profiles: Neurotypical (NT), Gifted (G), Twice-exceptional (2e), and Collapse-prone (C). The system evolves via the entropic modulation operator $\mathcal{E}$ (see Section 2), incorporating deterministic nonlinear interactions and parametric noise.
+
+\paragraph{Profile 1: Neurotypical (NT)} shows stable anchoring ($\alpha \approx 0.9$), low symbolic curvature ($\kappa \approx 0.1$), and minimal entropy ($E_r \approx 0.05$). Its trajectory remains confined to a narrow symbolic basin, suggesting low variance in symbolic state over time (Fig.~\ref{fig:gamma_profiles}).
+
+\paragraph{Profile 2: Gifted (G)} exhibits moderate anchoring ($\alpha \approx 0.6$), elevated curvature ($\kappa \approx 0.75$), and high recursive entropy ($E_r \approx 0.8$). The trajectory demonstrates symbolic divergence without collapse, reflecting nonlinearity and symbolic flexibility (Fig.~\ref{fig:gamma_profiles}).
+
+\paragraph{Profile 3: Twice-exceptional (2e)} oscillates between basins, with $\alpha(t)$ fluctuating between 0.3 and 0.85, and episodic surges in $E_r(t)$. This profile combines phases of symbolic coherence with entropic disruption, simulating cognitive dissonance or oscillatory stability (Fig.~\ref{fig:gamma_profiles}).
+
+\paragraph{Profile 4: Collapse-prone (C)} starts at $\alpha_0 = 0.5$ and undergoes progressive degradation due to compounding $E_r$ and $\kappa$. By $t = 50$, $\alpha \rightarrow 0.1$, and $E_r > 0.9$, indicating a symbolic breakdown. This regime reflects unstable symbolic anchoring and associative overload.
+
+\paragraph{Collapse–Recovery Scenario:} We simulated an external dampening event at $t = 70$ reducing $E_r$ and increasing $\alpha$ by intervention terms $\delta_\alpha$, $\delta_E$. The trajectory returns to a bounded symbolic region, illustrating restoration of coherence under entropic compression (Fig.~\ref{fig:collapse_recovery}).
+
+\paragraph{Symbolic Topology:} A 3D trajectory $\gamma(t)$ over $(\alpha, \kappa, E_r)$ reveals organized transitions and clustering (Fig.~\ref{fig:trajectory_3D}), suggesting symbolic attractors and the potential for symbolic fingerprinting across individuals.
+
+\paragraph{Comparative Positioning:} Table~\ref{tab:model_comparison} situates our framework relative to other cognitive theories. While FEP and Entropic Brain offer entropy-centric formulations, the symbolic manifold uniquely enables symbolic interpretability and neurodiversity modeling.
+
+Together, these simulations support the hypothesis that symbolic cognitive profiles manifest as structured dynamic regimes in $\mathbb{S}$, offering a generative and interpretable approach to modeling variation in mental states.

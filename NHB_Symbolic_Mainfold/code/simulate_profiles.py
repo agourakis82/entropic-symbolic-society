@@ -54,5 +54,8 @@ for idx, (label, (alpha, kappa, Er)) in enumerate(profiles.items()):
 
 axs[-1].set_xlabel("Time (t)")
 plt.tight_layout()
-plt.savefig("../figs/Fig_gamma_profiles.pdf", bbox_inches="tight")
+import os
+fig_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'figs'))
+os.makedirs(fig_dir, exist_ok=True)
+plt.savefig(os.path.join(fig_dir, "Fig_gamma_profiles.pdf"), bbox_inches="tight")
 plt.show()
