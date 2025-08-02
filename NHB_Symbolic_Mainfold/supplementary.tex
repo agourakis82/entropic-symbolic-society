@@ -1,5 +1,3 @@
-
-
 \documentclass[12pt]{article}
 \usepackage{amsmath, amssymb, graphicx, hyperref}
 \usepackage[a4paper,margin=2.5cm]{geometry}
@@ -30,6 +28,8 @@ Each $\phi_i$ represents a nonlinear interaction function modulating interdepend
 \gamma_{t+1} = \gamma_t + \mathcal{E}(\gamma_t)
 \]
 
+These updates simulate recursive symbolic transitions governed by entropic modulation. The $\phi$ functions in each dimension were implemented as saturating nonlinearities with logistic forms: $\phi_x = \frac{a}{1 + \exp(-b \cdot z)}$, where $z$ denotes the interacting variable.
+
 Noise terms $\xi_i$ can be added per dimension to simulate symbolic instability. Further formal expansions are available upon request.
 
 \section*{S2. Simulation Parameters}
@@ -43,7 +43,7 @@ Noise terms $\xi_i$ can be added per dimension to simulate symbolic instability.
         \item 2e: variable $\alpha(t)$, episodic $E_r$
         \item Collapse-prone: $\alpha=0.5$, $\kappa=0.6$, $E_r=0.6$
     \end{itemize}
-    \item Damping (collapse--recovery): $\delta_\alpha = +0.3$, $\delta_E = -0.4$
+    \item Damping intervention (for symbolic recovery simulation): $\delta_\alpha = +0.3$, $\delta_E = -0.4$
     \item Simulation environment: Python 3.11, matplotlib, numpy
 \end{itemize}
 
@@ -63,7 +63,7 @@ Noise terms $\xi_i$ can be added per dimension to simulate symbolic instability.
 
 \section*{S4. Simulation Code Snippets}
 
-\textbf{Trajectory example:}
+The core update function is implemented in Python using modular dynamics. An excerpt is shown below:
 
 \begin{verbatim}
 def update_gamma(alpha, kappa, E_r):
@@ -88,6 +88,6 @@ For full code, see GitHub repository: \url{https://github.com/agourakis82/entrop
 [1] Langdon et al. (2023) \\
 [2] Carhart-Harris et al. (2019) \\
 [3] Sizemore et al. (2019) \\
-[... add as needed from main.bib ...] \\
+For full list of supplementary references, see `references.bib` used in the main manuscript. \\
 
 \end{document}
