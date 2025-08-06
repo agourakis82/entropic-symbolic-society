@@ -24,3 +24,14 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+# Ignore virtualenv
+env311/
+clean_env/
+__pycache__/
+*.pyc
+
+# Ignore arquivos grandes
+*.csv
+*.gpickle
+*.pkl
+*.zip

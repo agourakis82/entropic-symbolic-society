@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "Symbolic Manifolds and Entropic Dynamics: A Cognitive Topology of Mental States"
+message: "If you use this manuscript or its symbolic modeling framework, please cite it using the metadata below."
+authors:
+  - family-names: Agourakis
+    given-names: Demetrios
+    affiliation: São Leopoldo Mandic, PUC-SP
+    orcid: https://orcid.org/0000-0002-8596-5097
+    email: demetrios@agourakis.med.br
+keywords:
+  - symbolic cognition
+  - entropy
+  - cognitive modeling
+  - neurodiversity
+  - symbolic manifold
+repository-code: https://github.com/agourakis82/entropic-symbolic-society
+license: CC-BY-4.0
+version: 1.4
+doi: 10.5281/zenodo.16730036
+date-released: 2025-08-02

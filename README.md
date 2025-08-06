@@ -1,111 +1,54 @@
-# 🧠 The Fractal Nature of an Entropically-Driven Society
+# Symbolic Manifolds and Entropic Dynamics: A Cognitive Topology of Mental States (v1.4)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16533374.svg)](https://doi.org/10.5281/zenodo.16533374)
+## Overview
+This repository contains the LaTeX source code, simulation scripts, and supplementary materials for the manuscript:
 
-> A symbolic-cognitive and mathematical exploration of societal organization under recursive entropic tension.
+> **Symbolic Manifolds and Entropic Dynamics: A Cognitive Topology of Mental States**  
+> Demetrios Chiuratto Agourakis  
+> Submitted for publication to *Nature Human Behaviour*
 
----
+Version: **v1.4**  
+DOI: [10.5281/zenodo.16730036](https://doi.org/10.5281/zenodo.16730036)
 
-## ✳️ Overview
+## Abstract
+We introduce a symbolic–topological model in which cognitive states evolve as trajectories \( \gamma(t) = (\alpha, \kappa, E_r) \) on a three-dimensional manifold. Simulations reproduce neurotypical, gifted, twice-exceptional (2e), and collapse-prone profiles. The framework bridges symbolic cognition, entropy-driven brain theories, and dynamical systems — offering new translational avenues for cognitive modeling, AI design, and psychiatric diagnostics.
 
-This repository hosts the modular research ecosystem of the project *The Fractal Nature of an Entropically-Driven Society*, authored by **Demetrios Chiuratto Agourakis**.  
-It proposes a groundbreaking epistemological framework uniting:
-
-- Fractal geometry
-- Entropy and symbolic organization
-- Neurocognition and giftedness
-- Topologies of consciousness and trauma
-- Formal models of symbolic space
-
-The work is developed in modular stages, each published with its own DOI, source code, LaTeX source, and commentary. This is a living repository — it grows, folds, and reorganizes itself as the research evolves.
-
----
-
-## 📌 Foundation: M01_context Manifesto
-
-> “This text is not a theory. It is society folding into language. It breathes.”
-
-🔗 **[M01 DOI (awaiting community validation)](https://doi.org/10.5281/zenodo.16533374)**  
-📄 `sections/M01_context_manifesto.tex`
-
----
-
-## ♻️ Module M02 — Entropy as a Fractal Organizing Vector
-
-> “Entropy is not disorder. It is recursive possibility folding into form.”
-
-🔗 **[M02 DOI — Zenodo](https://doi.org/10.5281/zenodo.16541976)**  
-📄 `sections/M02_entropy_fractal_vector.tex`
-
----
-
-## 🧠 Module M04 — Symbolic Epistemology and Recursive Cognition
-
-> “Anchoring is what prevents symbolic collapse. Curvature is what lets it explore. Entropy is what makes it evolve.”
-
-🔗 **[M04 DOI — Zenodo](https://doi.org/10.5281/zenodo.16619481)**  
-📄 `sections/M04_symbolic_epistemology.tex`
-
-This module expands the theoretical framework of symbolic epistemology by introducing formal metrics for epistemic anchoring (α), symbolic curvature (κ), and recursive entropy (𝓔ᵣ).  
-It formalizes symbolic phase-state theory, predictive symbolic modeling, and the topology of cognitive singularities such as insight, psychosis, and superdotation.  
-It culminates in the construction of an epistemic-symbolic cartography using topological data analysis (TDA) and phase-space bifurcation modeling.  
-> 🧾 This revised version (M04_v1.2, DOI [10.5281/zenodo.16619481](https://doi.org/10.5281/zenodo.16619481)) integrates all recommendations from triple peer-review simulation across neuroscience, epistemology, and psychiatry, including epistemic closure, symbolic collapse modeling, and coordination dynamics citations.
-
-> 🔎 This module was validated using plagiarismcheck.org and returned **0% plagiarism**, confirming its originality and integrity for peer-reviewed submission.
-
----
-
-## 🧠 Module M05 — Symbolic Collapse, Recovery, and Computational Trajectories
-
-> “When meaning breaks, the symbolic system seeks new curvature to reorganize its trajectory.”
-
-🔗 **[M05 DOI — Zenodo](https://doi.org/10.5281/zenodo.16623243)**  
-📄 `sections/M05_symbolic_clinical_translation.tex`
-
-This module formalizes the symbolic collapse-recovery cycle through phase-space dynamics, entropic modulation, and semantic anchoring.  
-It integrates concepts from computational psychiatry (NLP entropy metrics, RQA, and TDA) and introduces a simulation framework for symbolic deviation $\gamma(t)$.  
-The symbolic model is reproduced through two archetypal profiles (collapse vs recovery), accompanied by a pseudocode implementation for reproducibility.  
-> 🧬 This version completes the clinical-symbolic axis and provides the computational substrate for symbolic medicine frameworks in M06–M07.
-
-> 🔎 This module was validated using plagiarismcheck.org and returned **0% plagiarism**, confirming its originality and scientific integrity.
-
----
-
-## 📁 Repository Structure
+## Repository Structure
 
 ```bash
-.
-├── sections/                 # Modular .tex files (Introduction, Results, Interludes, etc.)
-├── appendices/              # Visuals, equations, glossary
-├── code/                    # Simulations, models, symbolic field visualizations
-├── M01_context_manifesto.tex
-├── references.bib
-├── main_modular_clean.tex
-├── metadata.yaml
-├── CITATION.cff
-└── README.md
+NHB_Symbolic_Mainfold/
+├── main.tex                   # Main manuscript file
+├── 01_intro.tex              # Introduction
+├── 02_model_structure.tex    # Symbolic manifold model structure
+├── 03_simulation_results.tex # Simulations of cognitive regimes
+├── 04_translational.tex      # Translational applications and insights
+├── 05_methods.tex            # Model equations and simulations
+├── 06_empirical_mapping.tex  # Empirical correlates and biomarkers
+├── 07_parameters.tex         # Parameters table (Extended Data)
+├── 08_conclusion.tex         # Final discussion and synthesis
+├── supplementary.tex         # Additional mathematical expansions
+├── references.bib            # Bibliographic database (BibTeX)
+├── figs/                     # All figures (PDF/PNG)
+├── code/                     # Python scripts for simulation and plotting
+└── logs/                     # Update logs (e.g. NHB_update_v1.4.md)
 ```
 
+## Code & Data
+- All code is available in `code/`
+- To reproduce simulations, run `simulate_profiles.py` and `plot_symbolic_regimes_map.py`
+- Figures will be saved to `figs/`
+
+## Citation
+If using this work or model, please cite:
+
+> Agourakis DC. Symbolic Manifolds and Entropic Dynamics: A Cognitive Topology of Mental States. Zenodo. 2025. DOI: [10.5281/zenodo.16730036](https://doi.org/10.5281/zenodo.16730036)
+
+## License
+This project is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+
+## Contact
+Email: [demetrios@agourakis.med.br](mailto:demetrios@agourakis.med.br)  
+ORCID: [0000-0002-8596-5097](https://orcid.org/0000-0002-8596-5097)
+
 ---
-
-## 🔬 Future Modules
-
-| Module | Title | Description |
-|--------|-------|-------------|
-| `M01_context` | Foundational Manifesto | Ontological and symbolic foundation |
-| `M02_secaoX` | Section refinements | Recursive rewriting of core symbolic sections |
-| `M03_modelo_mat` | Mathematical formalization | Symbolic Schrödinger and entropy dynamics |
-| `M04_simulacoes` | Visual simulations | Monte Carlo, recursive symbolic fields |
-| `M05_dados_empiricos` | Neuroscientific parallels | Cortical fractality, giftedness patterns |
-| `M06_interface_superdotacao` | Paradigm shift proposal | Giftedness as symbolic singularity |
-| `M07_dialogos` | Registered dialogues | Symbolic-metacognitive logs |
-| `M08_publicacao` | Final assembly | Q1 submission draft and argumentation layer |
-
----
-
-## 🖋️ Author and License
-
-**Author:** Demetrios Chiuratto Agourakis  
-**ORCID:** [0000-0002-8596-5097](https://orcid.org/0000-0002-8596-5097)  
-**Affiliation:** Pontifícia Universidade Católica de São Paulo (PUC-SP)  
-**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+*Developed as part of the modular research platform "The Fractal Nature of an Entropically-Driven Society".*

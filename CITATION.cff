@@ -1,16 +1,16 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
-title: "Symbolic Epistemology and Recursive Cognition: Anchoring, Entropy, and Topological Dynamics"
+title: "Symbolic Manifolds and Entropic Dynamics: A Cognitive Topology of Mental States"
 authors:
   - family-names: "Agourakis"
     given-names: "Demetrios Chiuratto"
     orcid: "https://orcid.org/0000-0002-8596-5097"
     affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
 date-released: 2025-07-30
-version: "M05_v1.0"
+version: "v1.5"
 license: "CC-BY-4.0"
-doi: "10.5281/zenodo.16623243"
+doi: "10.5281/zenodo.16730036"
 repository-code: "https://github.com/agourakis82/entropic-symbolic-society"
-url: "https://zenodo.org/record/16623243"
+url: "https://zenodo.org/record/16730036"
 abstract: >
-  Module M05 advances the entropic-symbolic framework into the domain of clinical application. It formalizes symbolic collapse and reconfiguration through the dynamic behavior of γ(t), introduces a phase-space description for symbolic instability, and integrates entropic metrics from computational psychiatry. The module includes a full simulation of symbolic trajectories under varying anchoring (α) and curvature (κ), with pseudocode for reproducibility. It marks the transition between theoretical formulation and symbolic medicine, opening the epistemic manifold to diagnostic and therapeutic modeling.
+  This study introduces a symbolic-topological framework for cognition in which mental states evolve as trajectories through a three-dimensional manifold defined by anchoring, symbolic curvature, and recursive entropy. Simulations reproduce neurotypical, gifted, twice-exceptional (2e), and collapse-prone cognitive regimes, revealing bifurcations and collapse–recovery dynamics. The model unifies entropy-based theories with symbolic cognition and suggests translational biomarkers, paving the way toward a “topological symbolic psychiatry.”
