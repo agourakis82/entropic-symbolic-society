@@ -226,7 +226,31 @@ related_identifiers:
   - relation: isIdenticalTo
     identifier: https://doi.org/10.5281/zenodo.16730036
 
-version: NHB_v1
+version: v1.4
 
 notes: >
   This manuscript is the primary integrative product of the entropic-symbolic-society project, prepared for submission to Nature Human Behaviour. It integrates prior modular publications and completes the theoretical and translational arc from symbolic topology to empirical modeling.
+
+  title: "Symbolic Manifolds and Entropic Dynamics: A Cognitive Topology of Mental States"
+version: "v1.5"
+creators:
+  - name: "Demetrios Agourakis"
+    affiliation: "São Leopoldo Mandic / PUC‑SP"
+    orcid: "0000‑0002‑8596‑5097"
+description: |
+  Version 1.5 builds upon the previous release (v1.4, DOI: 10.5281/zenodo.16730036) by providing a fully curated and reproducible pipeline of symbolic cognition modeling. 
+  This release introduces advanced symbolic metrics, PCA / UMAP embeddings, clustering analyses, and editorial standardization for publication readiness.
+keywords:
+  - symbolic cognition
+  - SWOW
+  - network embedding
+  - node2vec
+  - UMAP
+  - entropic dynamics
+license: "MIT"
+upload_type: "dataset"
+related_identifiers:
+  - identifier: "10.5281/zenodo.16730036"
+    relation: "isPreviousVersionOf"
+  - identifier: "10.5281/zenodo.16752238"
+    relation: "isIdenticalTo"
