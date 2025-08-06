@@ -1,23 +1,31 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-κ-bifurcation diagram (schematic). Headless-safe.
-"""
-from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
-def main():
-    outdir = Path("figs"); outdir.mkdir(parents=True, exist_ok=True)
-    k = np.linspace(0, 3, 400)
-    stable = np.tanh(1.2*(k-1)) + 0.2
-    fig, ax = plt.subplots(figsize=(6,4))
-    ax.plot(k, stable, lw=2)
-    ax.set_xlabel("κ control"); ax.set_ylabel("Steady state")
-    ax.set_title("κ-bifurcation (schematic)")
-    for ext in ("png","pdf"):
-        fig.savefig(outdir / f"Fig_kappa_bifurcation.{ext}", bbox_inches="tight", dpi=300)
-    plt.close(fig)
+# Time axis
+t = np.linspace(0, 100, 500)
 
-if __name__ == "__main__":
-    main()
+# Fixed parameters
+alpha = np.full_like(t, 0.6)
+Er = np.full_like(t, 0.4)
+
+# Bifurcating curvature
+kappa = 0.3 + 0.0015 * (t**2) * np.sin(0.1 * t)
+
+# Plot
+plt.figure(figsize=(10, 4))
+plt.plot(t, alpha, label=r"$\alpha$ (Anchoring)", color="blue", linestyle="--")
+plt.plot(t, kappa, label=r"$\kappa$ (Curvature)", color="green")
+plt.plot(t, Er, label=r"$E_r$ (Entropy)", color="red", linestyle=":")
+plt.axvline(x=60, color='black', linestyle=':', label="Bifurcation Threshold")
+plt.title("Bifurcation Simulation via $\kappa(t)$")
+plt.xlabel("Time (t)")
+plt.ylabel("Symbolic Parameters")
+plt.legend()
+plt.grid(True)
+
+# Save figure
+fig_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'figs'))
+os.makedirs(fig_dir, exist_ok=True)
+plt.savefig(os.path.join(fig_dir, "Fig_kappa_bifurcation.pdf"), bbox_inches="tight")
+plt.show()

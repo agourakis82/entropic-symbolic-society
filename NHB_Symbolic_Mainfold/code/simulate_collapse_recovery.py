@@ -1,27 +1,31 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Collapse and recovery time-series (Extended Data S6). Headless-safe.
-"""
-from pathlib import Path
+
+
+
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
-def main():
-    outdir = Path("figs"); outdir.mkdir(parents=True, exist_ok=True)
-    t = np.linspace(0, 10, 600)
-    a = 0.25 + 0.55*(1/(1+np.exp(-(t-5))))       # recovery
-    k = 0.6 - 0.35*np.exp(-((t-5)/2.0)**2)       # dip + recover
-    e = 0.3 + 0.3*np.exp(-((t-2)/0.8)**2) + 0.15*np.sin(0.7*t)*np.exp(-0.1*t)
-    fig, ax = plt.subplots(1,1, figsize=(7,4))
-    ax.plot(t, a, label="α", lw=2)
-    ax.plot(t, k, label="κ", lw=2)
-    ax.plot(t, e, label="E_r", lw=2)
-    ax.legend(frameon=False, ncols=3)
-    ax.set_xlabel("time"); ax.set_ylabel("state")
-    for ext in ("png","pdf"):
-        fig.savefig(outdir / f"Fig_collapse_recovery.{ext}", bbox_inches="tight", dpi=300)
-    plt.close(fig)
+# Define time axis
+t = np.linspace(0, 100, 500)
 
-if __name__ == "__main__":
-    main()
+# Define collapse and recovery dynamics
+alpha = 0.1 + 0.5 * (1 - np.exp(-0.05 * (t - 20)))  # recovery after collapse
+kappa = 0.4 + 0.1 * np.sin(0.1 * t) + 0.05 * np.random.randn(len(t))
+Er = 0.8 * np.exp(-0.03 * t) + 0.05 * np.sin(0.07 * t)
+
+# Plot
+plt.figure(figsize=(10, 4))
+plt.plot(t, alpha, label=r"$\alpha$ (Anchoring)", color="blue")
+plt.plot(t, kappa, label=r"$\kappa$ (Curvature)", color="green")
+plt.plot(t, Er, label=r"$E_r$ (Entropy)", color="red")
+plt.title("Collapse and Recovery Simulation")
+plt.xlabel("Time (t)")
+plt.ylabel("Symbolic Parameters")
+plt.legend()
+plt.grid(True)
+
+# Save figure
+fig_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'figs'))
+os.makedirs(fig_dir, exist_ok=True)
+plt.savefig(os.path.join(fig_dir, "Fig_collapse_recovery.pdf"), bbox_inches="tight")
+plt.show()

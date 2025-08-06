@@ -1,27 +1,37 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-3D trajectory in (α, κ, E_r) space (Extended Data S4). Headless-safe.
-"""
-from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D  # noqa
+from mpl_toolkits.mplot3d import Axes3D
+import os
 
-def main():
-    outdir = Path("figs"); outdir.mkdir(parents=True, exist_ok=True)
-    t = np.linspace(0, 2*np.pi, 300)
-    a = 0.5 + 0.3*np.cos(t)
-    k = 0.4 + 0.25*np.sin(2*t)
-    e = 0.6 + 0.2*np.sin(t + np.pi/4)
-    fig = plt.figure(figsize=(6,5))
-    ax = fig.add_subplot(111, projection="3d")
-    ax.plot(a, k, e, lw=1.8)
-    ax.set_xlabel("α"); ax.set_ylabel("κ"); ax.set_zlabel("E_r")
-    ax.set_title("Trajectory in symbolic manifold (schematic)")
-    for ext in ("png","pdf"):
-        fig.savefig(outdir / f"Fig_trajectory_3D.{ext}", bbox_inches="tight", dpi=300)
-    plt.close(fig)
+# Time vector
+t = np.linspace(0, 100, 500)
 
-if __name__ == "__main__":
-    main()
+# Define synthetic trajectory γ(t)
+alpha = 0.6 + 0.2 * np.sin(0.05 * t)                # Anchoring
+kappa = 0.4 + 0.3 * np.cos(0.03 * t + 1.2)           # Curvature
+Er = 0.5 + 0.1 * np.sin(0.07 * t + 0.8)              # Entropy rate
+
+# Create 3D figure
+fig = plt.figure(figsize=(10, 7))
+ax = fig.add_subplot(111, projection='3d')
+
+# Plot trajectory
+ax.plot(alpha, kappa, Er, label=r'$\gamma(t)$ trajectory', color='purple', linewidth=2)
+
+# Highlight start and end
+ax.scatter(alpha[0], kappa[0], Er[0], color='green', s=50, label="Start")
+ax.scatter(alpha[-1], kappa[-1], Er[-1], color='red', s=50, label="End")
+
+# Axis labels
+ax.set_xlabel(r'$\alpha$ (Anchoring)')
+ax.set_ylabel(r'$\kappa$ (Curvature)')
+ax.set_zlabel(r'$E_r$ (Entropy Rate)')
+ax.set_title(r'3D Symbolic Trajectory $\gamma(t)$ in $(\alpha, \kappa, E_r)$ space')
+ax.legend()
+
+# Save figure
+fig_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'figs'))
+os.makedirs(fig_dir, exist_ok=True)
+fig_path = os.path.join(fig_dir, 'Fig_trajectory_3D.pdf')
+plt.savefig(fig_path, bbox_inches='tight')
+plt.show()

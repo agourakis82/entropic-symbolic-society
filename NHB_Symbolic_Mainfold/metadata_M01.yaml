@@ -1,0 +1,20 @@
+title: "The Fractal Nature of an Entropically-Driven Society: Introduction to the Symbolic Framework"
+upload_type: publication
+publication_type: article
+creators:
+  - name: Agourakis, Demetrios
+    affiliation: São Leopoldo Mandic, PUC-SP
+    orcid: 0000-0002-8596-5097
+description: >
+  This foundational document introduces the symbolic-cognitive framework used in the NHB manuscript. It outlines the motivation,
+  structure, and interdisciplinary background underlying the fractal-symbolic approach to mental state modeling.
+license: cc-by-4.0
+access_right: open
+keywords:
+  - entropy
+  - symbolic cognition
+  - societal fractals
+  - neurodiversity
+related_identifiers:
+  - relation: isPartOf
+    identifier: https://doi.org/10.5281/zenodo.16682785
