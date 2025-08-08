@@ -1,37 +1,30 @@
-
-# LaTeX
-*.aux
-*.log
-*.toc
-*.out
-*.fls
-*.fdb_latexmk
-*.synctex.gz
-*.bbl
-*.blg
-
-
 # Python
 __pycache__/
 *.pyc
 *.pyo
-*.ipynb_checkpoints
+*.tmp
 
-# VS Code
-.vscode/
-*.code-workspace
+# Jupyter
+.ipynb_checkpoints/
 
-# OS
-.DS_Store
-Thumbs.db
-# Ignore virtualenv
+# Environments
+.venv/
+env/
+venv/
 env311/
 clean_env/
-__pycache__/
-*.pyc
+NHB_Symbolic_Mainfold/notebooks/clean_env/
+NHB_Symbolic_Mainfold/notebooks/env311/
 
-# Ignore arquivos grandes
-*.csv
-*.gpickle
-*.pkl
-*.zip
+# LaTeX build
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+
+# OS / misc
+.DS_Store

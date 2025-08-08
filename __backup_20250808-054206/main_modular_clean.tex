@@ -1,0 +1,87 @@
+% ---------------------------------------------
+% Modular LaTeX Architecture – Entropic Society
+% Compilation: pdflatex or Overleaf (XeLaTeX optional)
+% Author: Demetrios Chiuratto Agourakis
+% DOI: https://doi.org/10.5281/zenodo.16541976
+% DOI M03: https://doi.org/10.5281/zenodo.16567866
+% License: CC-BY 4.0
+% ---------------------------------------------
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{fancyhdr}
+\setlength{\headheight}{14.5pt}
+
+\usepackage{datetime2}
+
+\setstretch{1.3}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    pdftitle={The Fractal Nature of an Entropically-Driven Society},
+    pdfauthor={Demetrios Chiuratto Agourakis}
+}
+
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection.}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection.}{1em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{The Fractal Nature of an Entropically-Driven Society}
+\fancyhead[R]{\thepage}
+
+\title{\textbf{The Fractal Nature of an Entropically-Driven Society} \\ \large Modular Synthesis v1.0 (M01–M06)}
+% ---------------------------------------------
+% Submission Metadata (for Zenodo / arXiv)
+% Keywords: symbolic entropy, fractal society, cognitive singularity, recursive structure, psychiatry, mathematical modeling
+% arXiv Categories: physics.data-an, physics.soc-ph, q-bio.NC, cs.AI
+% Submission target: Nature Human Behaviour / Frontiers in Psychology / Entropy (MDPI)
+% ---------------------------------------------
+
+\author{
+Demetrios Chiuratto Agourakis\\
+\textit{Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa}\\
+\texttt{demetrios@agourakis.med.br}
+}
+\date{Version compiled for Zenodo: July 30, 2025}
+
+\begin{document}
+
+\maketitle
+
+\footnotetext[1]{This document corresponds to the modular version M06\_v1.1, DOI: \href{https://doi.org/10.5281/zenodo.16633012}{10.5281/zenodo.16633012}.}
+
+\begin{abstract}
+This modular manuscript serves as the evolving container of the project \textit{The Fractal Nature of an Entropically-Driven Society}. Each section acts as a recursive, self-similar articulation of a symbolic system under epistemic tension. This work interweaves symbolic cognition, giftedness, entropy, and cognitive singularities within a unified framework. It is not static: it breathes.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% Input modular symbolic sections here
+\input{sections/M01_context_manifesto.tex}
+\input{sections/M02_entropy_fractal_vector.tex}
+\input{sections/M03_symbolic_modeling.tex}
+\input{sections/M04_symbolic_epistemology.tex}
+\input{sections/M05_symbolic_clinical_translation.tex}
+\input{sections/M06_Symbolic_Profiles_of_Cognitive_Singularity.tex}
+% \input{sections/section_superdotacao.tex}
+% \input{sections/interlude_1_contraformacao.tex}
+% \input{sections/section_epiphany_symbolic_field.tex}
+% \input{sections/conclusion_recursive_dissolution.tex}
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+% Zenodo DOI for this compiled version: https://doi.org/10.5281/zenodo.16533374
+% Modules included: M01 to M06
+\end{document}
