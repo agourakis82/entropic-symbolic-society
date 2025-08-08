@@ -4,6 +4,10 @@
 
 ## 📘 Overview
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16783257.svg)](https://doi.org/10.5281/zenodo.16783257)
+
+**This repository corresponds to version v1.6 (DOI: 10.5281/zenodo.16783257), building on v1.4/v1.5.**
+
 This subproject contains the **full computational implementation** of the study:
 
 > **"Symbolic Manifolds and Entropic Dynamics: A Cognitive Topology of Mental States"**

@@ -1,4 +1,13 @@
-# Symbolic Manifolds and Entropic Dynamics: A Cognitive Topology of Mental States (v1.4)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16783257.svg)](https://doi.org/10.5281/zenodo.16783257)
+
+**Code (Zenodo concept DOI)**: 10.5281/zenodo.16752238  
+**Version v1.6 DOI**: 10.5281/zenodo.16783257  
+
+**Preregistration (OSF)**: 10.17605/OSF.IO/FCT5U  
+**Raw Data (OSF)**: 10.17605/OSF.IO/C4RDH  
+**Derived Results (OSF)**: 10.17605/OSF.IO/CS3GN  
+**Validation Outputs (OSF)**: 10.17605/OSF.IO/WF67R  
+**Neuro Integration (OSF)**: 10.17605/OSF.IO/W2C34
 
 ## Overview (Umbrella Project)
 This repository is the **philosophical and systems-level umbrella** for the research program on symbolic manifolds and entropy-driven cognition.  
