@@ -1,92 +1,133 @@
-# 🧠 The Symbolic Manifold Project: Entropic Dynamics in Cognitive Space
+# 🧠 NHB Computational Package — Symbolic Manifolds and Entropic Dynamics
 
 ![Symbolic Graph](figs/cover_symbolic_graph.png)
 
 ## 📘 Overview
 
-This repository contains the full implementation, simulation, and symbolic analysis pipeline for the study entitled:
+This subproject contains the **full computational implementation** of the study:
 
 > **"Symbolic Manifolds and Entropic Dynamics: A Cognitive Topology of Mental States"**
 
-This project is part of the manuscript preparation for submission to **Nature Human Behaviour** and builds upon the foundational fractal-entropic model previously structured under the DOI: [10.5281/zenodo.16533374](https://doi.org/10.5281/zenodo.16533374).
+It is designed as a **reproducible analysis pipeline** for submission to *Nature Human Behaviour*, and is part of the broader research program:
+> **"The Fractal Nature of an Entropically-Driven Society"**  
+> DOI (umbrella): [10.5281/zenodo.16730036](https://doi.org/10.5281/zenodo.16730036)
+
+This package builds on the foundational fractal–entropic model (DOI: [10.5281/zenodo.16533374](https://doi.org/10.5281/zenodo.16533374)) and implements a structured 6‑notebook pipeline for empirical mapping of symbolic manifolds.
+
+**Version:** v1.5  
+**DOI (code):** [10.5281/zenodo.16752238](https://doi.org/10.5281/zenodo.16752238)  
+**DOI (data):** [10.17605/OSF.IO/2AQP7](https://doi.org/10.17605/OSF.IO/2AQP7)
+
+---
 
 ## 🔭 Project Scope
 
-This work integrates large-scale semantic networks (SWOW) with symbolic metrics, graph theory, node embeddings (Node2Vec), and topological clustering (UMAP + HDBSCAN) to construct a dynamic and interpretable manifold of cognition. The project is guided by four core research questions:
+This work integrates large-scale semantic networks (SWOW) with symbolic metrics, graph theory, embeddings, and clustering to construct a dynamic and interpretable manifold of cognition. The pipeline addresses:
 
-1. **Can symbolic distances in associative space model cognitive entropy?**
-2. **How do topological centrality and clustering reflect symbolic anchoring and curvature of thought?**
-3. **Is it possible to derive measurable symbolic metrics that correlate with mental states?**
-4. **Can entropic manifolds reveal hidden cognitive constraints or attractors?**
+1. Can symbolic distances in associative space model cognitive entropy?  
+2. How do topological centrality and clustering reflect symbolic anchoring and curvature of thought?  
+3. Is it possible to derive measurable symbolic metrics that correlate with mental states?  
+4. Can entropic manifolds reveal hidden cognitive constraints or attractors?  
 
-## 🧪 Architecture
+---
+
+## 🧪 Pipeline Architecture
 
 | Notebook | Description |
-|---------|-------------|
-| `00_Overview_and_Readme.ipynb` | Project scope, goals, and roadmap (this document in notebook form) |
-| `01_Load_and_Visualize_SWOW.ipynb` | Loads SWOW dataset, basic structure and stats |
-| `01_SWOW_graph_analysis.ipynb` | Graph building and visualization using NetworkX |
-| `02_Centrality_and_SymbolicMetrics.ipynb` | Calculates symbolic anchoring, curvature, entropy |
-| `03_EntropicEmbeddings_and_CognitiveDistances.ipynb` | Node2Vec embeddings, cognitive space projection |
-| `04_Map_Symbolic_Metrics_From_SWOW.ipynb` | Aligns graph metrics and embeddings, builds dataframe |
-| `05_Clustering_Symbolic_Manifold.ipynb` | UMAP + HDBSCAN clustering and symbolic topology inference |
-| `06_Visualize_UMAP_Embeddings.ipynb` | Advanced visualizations, inter-cluster relationships |
+|----------|-------------|
+| `Notebook_01_Data_Preprocessing_and_Network_Construction.ipynb` | Load SWOW dataset, clean associations, build weighted directed graph |
+| `Notebook_02_Network_Metrics.ipynb` | Compute centrality measures, strengths, PageRank, clustering coefficients |
+| `Notebook_03_Generate_Embeddings.ipynb` | Generate node embeddings (SVD or Node2Vec) |
+| `Notebook_04_Merge_Metrics_and_Embeddings.ipynb` | Merge symbolic metrics with embeddings into a unified dataset |
+| `Notebook_05_Clustering_Analysis.ipynb` | Determine optimal cluster number via silhouette analysis, assign labels |
+| `Notebook_06_UMAP_Visualization.ipynb` | Project embeddings to 2D (UMAP or PCA fallback), visualize clusters |
+
+Outputs (CSV, NPY, PNG) are stored in `data/` and `results/` for reproducibility.
+
+---
 
 ## 🗂 Directory Structure
 
 ```
 NHB_Symbolic_Mainfold/
-├── data/                      # Processed graph and metric files (LFS tracked)
-├── figs/                      # All generated figures
-├── notebook/                 # Source notebooks (00 to 06)
-├── requirements.txt          # Reproducible environment
-├── reset_env.sh              # Clean environment setup script
-├── clean_and_commit.sh       # Commit-cleanup automation script
-└── README.md                 # This document
+├── data/                      # Input datasets, intermediate and final outputs
+│   └── raw/                   # Raw files from OSF (SWOW-EN, cueStats, etc.)
+├── results/                   # Generated figures and plots
+├── figs/                      # Manuscript figures
+├── notebooks/                 # Official pipeline notebooks (01–06)
+├── scripts/                   # utils.py, reset_env.sh, clean_and_commit.sh
+├── NHB_main.tex                # NHB LaTeX manuscript
+├── sections/                   # Manuscript sections (subproject scope)
+├── supplementary.tex           # NHB supplementary material
+├── requirements.txt            # Reproducible environment specification
+└── README.md                   # This document
 ```
+
+---
 
 ## ⚙️ Setup Instructions
 
-1. Create and activate environment:
-```bash
-bash reset_env.sh
-source clean_env/bin/activate
+1. **Clone the repository** (or download this subfolder).
+
+2. **Download raw data** from OSF DOI [10.17605/OSF.IO/2AQP7](https://doi.org/10.17605/OSF.IO/2AQP7) and place files in:
+```
+data/raw/
 ```
 
-2. Launch JupyterLab:
+3. **Create and activate environment:**
+```bash
+bash scripts/reset_env.sh
+conda activate entropic-symbolic-mainfold   # or source .venv/bin/activate if using venv
+```
+
+4. **Launch JupyterLab:**
 ```bash
 jupyter lab
 ```
 
-3. Run notebooks in order (`00_` to `06_`).
-
-## 🧠 Author and Affiliation
-
-This project is developed by **Demetrios Agourakis**, in the context of a multi-disciplinary exploration of cognition, entropy, symbolic logic and computational neuroscience. 
-
-Part of a broader research series under the title:
-> **"The Fractal Nature of an Entropically-Driven Society"**  
-> DOI (main): [10.5281/zenodo.16533374](https://doi.org/10.5281/zenodo.16533374)
-
-## 📎 License
-MIT License.
+5. **Run notebooks** in numerical order (01 → 06).
 
 ---
 
-For additional files, related publications or scripts, see the companion repositories and datasets listed in the main Zenodo registry.
+## 📎 Citation
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16752238.svg)](https://doi.org/10.5281/zenodo.16752238)
+If you use this package, please cite:
 
-**This repository corresponds to version v1.5 (DOI: 10.5281/zenodo.16752238), building on v1.4 (10.5281/zenodo.16730036).**  
-Please cite as follows:
+**Text citation:**
+> Agourakis DC. *Symbolic Manifolds — NHB Computational Package (Notebooks 01–06)*. Zenodo; 2025. DOI: 10.5281/zenodo.16752238.
 
+**BibTeX:**
 ```bibtex
-@misc{agourakis2025symbolic_v1_5,
+@software{agourakis2025symbolic_v1_5,
  author = {Demetrios Agourakis},
- title = {Symbolic Manifolds and Entropic Dynamics: A Cognitive Topology of Mental States},
+ title = {Symbolic Manifolds — NHB Computational Package (Notebooks 01–06)},
  year = {2025},
  publisher = {Zenodo},
  doi = {10.5281/zenodo.16752238},
  version = {v1.5},
  url = {https://doi.org/10.5281/zenodo.16752238}
 }
+```
+
+---
+
+## 📜 License
+
+This subproject follows the **dual licensing** defined in the root repository:
+
+- **Code** (Python, notebooks, scripts): MIT License  
+- **Text and figures**: Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+See the root `LICENSE` file for full terms.
+
+---
+
+## 🧠 Author and Affiliation
+
+Developed by **Demetrios Agourakis**  
+São Leopoldo Mandic / PUC-SP  
+ORCID: [0000-0002-8596-5097](https://orcid.org/0000-0002-8596-5097)
+
+---
+
+For related files, companion repositories, and datasets, refer to the [main Zenodo registry](https://doi.org/10.5281/zenodo.16730036).
