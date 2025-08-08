@@ -1,30 +1,12 @@
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.tmp
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Environments
+# Envs e caches
 .venv/
-env/
-venv/
-env311/
+env*/
 clean_env/
-NHB_Symbolic_Mainfold/notebooks/clean_env/
-NHB_Symbolic_Mainfold/notebooks/env311/
-
-# LaTeX build
-*.aux
-*.bbl
-*.blg
-*.log
-*.out
-*.toc
-*.lof
-*.lot
-
-# OS / misc
-.DS_Store
+**/__pycache__/
+**/.ipynb_checkpoints/
+# LaTeX temporários
+*.aux *.bbl *.blg *.log *.out
+# IDE
+.vscode/
+# Dados brutos (ficam no OSF)
+NHB_Symbolic_Mainfold/data/raw/
