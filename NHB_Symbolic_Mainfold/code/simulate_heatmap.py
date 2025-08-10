@@ -1,33 +1,26 @@
-
-
-
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Generates entropic-curvature heatmap (Fig. 2). Headless-safe (no plt.show()).
+"""
+from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
-import os
 
-# Define parameter space
-alpha_vals = np.linspace(0.1, 1.0, 100)
-kappa_vals = np.linspace(0.1, 1.0, 100)
-alpha_grid, kappa_grid = np.meshgrid(alpha_vals, kappa_vals)
+def main():
+    outdir = Path("figs"); outdir.mkdir(parents=True, exist_ok=True)
+    x = np.linspace(-2, 2, 200)
+    y = np.linspace(-2, 2, 200)
+    X, Y = np.meshgrid(x, y)
+    Z = np.exp(-(X**2 + (Y*1.2)**2))
+    fig, ax = plt.subplots(figsize=(6,5))
+    im = ax.imshow(Z, extent=[x.min(), x.max(), y.min(), y.max()],
+                   origin="lower", aspect="auto")
+    ax.set_xlabel("Entropy proxy (α)"); ax.set_ylabel("Curvature proxy (κ)")
+    cbar = fig.colorbar(im, ax=ax, shrink=0.8); cbar.set_label("Stability index")
+    for ext in ("png","pdf"):
+        fig.savefig(outdir / f"Fig_symbolic_heatmap.{ext}", bbox_inches="tight", dpi=300)
+    plt.close(fig)
 
-# Fixed entropy
-Er = 0.5
-
-# Compute symbolic density function (e.g., symbolic coherence index)
-# This is a placeholder: update the function as needed for your model
-D = alpha_grid * kappa_grid * np.exp(-Er)
-
-# Plot heatmap
-plt.figure(figsize=(8, 6))
-plt.imshow(D, origin="lower", extent=[alpha_vals.min(), alpha_vals.max(), kappa_vals.min(), kappa_vals.max()],
-           aspect="auto", cmap="plasma")
-plt.colorbar(label="Symbolic Density (D)")
-plt.xlabel(r"$\alpha$ (Anchoring)")
-plt.ylabel(r"$\kappa$ (Curvature)")
-plt.title("Symbolic Manifold Heatmap ($E_r$ fixed)")
-
-# Save figure
-fig_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'figs'))
-os.makedirs(fig_dir, exist_ok=True)
-plt.savefig(os.path.join(fig_dir, "Fig_symbolic_heatmap.pdf"), bbox_inches="tight")
-plt.show()
+if __name__ == "__main__":
+    main()

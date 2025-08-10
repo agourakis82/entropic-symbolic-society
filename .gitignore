@@ -10,3 +10,11 @@ clean_env/
 .vscode/
 # Dados brutos (ficam no OSF)
 NHB_Symbolic_Mainfold/data/raw/
+# LaTeX temp files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
