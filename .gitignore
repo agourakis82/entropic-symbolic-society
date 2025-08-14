@@ -1,37 +1,22 @@
+cat >> .gitignore << 'EOF'
+# macOS
+.DS_Store
 
-# LaTeX
+# LaTeX build
 *.aux
-*.log
-*.toc
-*.out
-*.fls
-*.fdb_latexmk
-*.synctex.gz
 *.bbl
 *.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.pdf
 
-
-# Python
+# Python venv
+.venv/
 __pycache__/
-*.pyc
-*.pyo
-*.ipynb_checkpoints
-
-# VS Code
-.vscode/
-*.code-workspace
-
-# OS
-.DS_Store
-Thumbs.db
-# Ignore virtualenv
-env311/
-clean_env/
-__pycache__/
-*.pyc
-
-# Ignore arquivos grandes
-*.csv
-*.gpickle
-*.pkl
-*.zip
+EOF
