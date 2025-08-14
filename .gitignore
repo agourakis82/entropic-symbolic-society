@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 cat >> .gitignore << 'EOF'
 # macOS
 .DS_Store
@@ -20,3 +21,42 @@ cat >> .gitignore << 'EOF'
 .venv/
 __pycache__/
 EOF
+=======
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VSCode
+.vscode/
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# macOS
+.DS_Store
+
+# Git LFS tracked large files
+*.csv
+*.gpickle
+*.pkl
+
+# Logs
+*.log
+
+# Hidden system files
+Icon?
+ehthumbs.db
+Thumbs.db
+>>>>>>> Stashed changes
