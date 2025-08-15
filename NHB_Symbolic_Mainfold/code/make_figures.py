@@ -7,7 +7,11 @@ Runner to generate all figures headlessly.
 - Copies outputs into figs_final with canonical names
 """
 from __future__ import annotations
-import os, shutil, subprocess, sys
+
+import os
+import shutil
+import subprocess
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -16,36 +20,48 @@ FINAL = ROOT / "figs_final"
 FINAL.mkdir(exist_ok=True)
 PY = sys.executable
 
+
 def run_script(cmd: list[str]) -> int:
     env = os.environ.copy()
     env["NO_SHOW"] = "1"
     print(">>", " ".join(cmd))
     return subprocess.call(cmd, env=env, cwd=ROOT)
 
+
 def main():
     steps = [
-        [PY, str(ROOT/"plot_symbolic_regimes_map.py")],
-        [PY, str(ROOT/"simulate_heatmap.py")],
-        [PY, str(ROOT/"simulate_kappa_bifurcation.py")],
-        [PY, str(ROOT/"simulate_profiles.py")],
-        [PY, str(ROOT/"simulate_trajectory_3D.py")],
-        [PY, str(ROOT/"simulate_collapse.py")],
-        [PY, str(ROOT/"simulate_collapse_recovery.py")],
+        [PY, str(ROOT / "plot_symbolic_regimes_map.py")],
+        [PY, str(ROOT / "simulate_heatmap.py")],
+        [PY, str(ROOT / "simulate_kappa_bifurcation.py")],
+        [PY, str(ROOT / "simulate_profiles.py")],
+        [PY, str(ROOT / "simulate_trajectory_3D.py")],
+        [PY, str(ROOT / "simulate_collapse.py")],
+        [PY, str(ROOT / "simulate_collapse_recovery.py")],
     ]
     fail = False
     for cmd in steps:
         rc = run_script(cmd)
         if rc != 0:
-            print("ERROR running:", cmd); fail = True
+            print("ERROR running:", cmd)
+            fail = True
 
     # analyze_swow with args (ajuste o caminho abaixo se preciso)
     graph = ROOT.parent / "results" / "word_network.graphml"
     if graph.exists():
-        rc = run_script([PY, str(ROOT/"analyze_swow.py"),
-                         "--graph", str(graph),
-                         "--outdir", "figs",
-                         "--base", "ext_S3_degree_distribution"])
-        if rc != 0: fail = True
+        rc = run_script(
+            [
+                PY,
+                str(ROOT / "analyze_swow.py"),
+                "--graph",
+                str(graph),
+                "--outdir",
+                "figs",
+                "--base",
+                "ext_S3_degree_distribution",
+            ]
+        )
+        if rc != 0:
+            fail = True
     else:
         print("WARNING: SWOW graphml not found:", graph)
 
@@ -69,6 +85,7 @@ def main():
             print("MISSING:", s.name)
 
     print("Done. Check figs_final/. Fail =", fail)
+
 
 if __name__ == "__main__":
     main()

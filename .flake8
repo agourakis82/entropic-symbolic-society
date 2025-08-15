@@ -1,0 +1,7 @@
+[flake8]
+max-line-length = 100
+# compat com black (evita falsos-positivos em fatias/operadores)
+extend-ignore = E203, W503
+# import tardio neste arquivo é intencional (ou pesado/opcional)
+per-file-ignores =
+    code/load_swow.py:E402

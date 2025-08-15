@@ -13,13 +13,13 @@ This subproject contains the **full computational implementation** of the study:
 > **"Symbolic Manifolds and Entropic Dynamics: A Cognitive Topology of Mental States"**
 
 It is designed as a **reproducible analysis pipeline** for submission to *Nature Human Behaviour*, and is part of the broader research program:
-> **"The Fractal Nature of an Entropically-Driven Society"**  
+> **"The Fractal Nature of an Entropically-Driven Society"**
 > DOI (umbrella): [10.5281/zenodo.16730036](https://doi.org/10.5281/zenodo.16730036)
 
 This package builds on the foundational fractal–entropic model (DOI: [10.5281/zenodo.16533374](https://doi.org/10.5281/zenodo.16533374)) and implements a structured 6‑notebook pipeline for empirical mapping of symbolic manifolds.
 
-**Version:** v1.5  
-**DOI (code):** [10.5281/zenodo.16752238](https://doi.org/10.5281/zenodo.16752238)  
+**Version:** v1.5
+**DOI (code):** [10.5281/zenodo.16752238](https://doi.org/10.5281/zenodo.16752238)
 **DOI (data):** [10.17605/OSF.IO/2AQP7](https://doi.org/10.17605/OSF.IO/2AQP7)
 
 ---
@@ -28,10 +28,10 @@ This package builds on the foundational fractal–entropic model (DOI: [10.5281/
 
 This work integrates large-scale semantic networks (SWOW) with symbolic metrics, graph theory, embeddings, and clustering to construct a dynamic and interpretable manifold of cognition. The pipeline addresses:
 
-1. Can symbolic distances in associative space model cognitive entropy?  
-2. How do topological centrality and clustering reflect symbolic anchoring and curvature of thought?  
-3. Is it possible to derive measurable symbolic metrics that correlate with mental states?  
-4. Can entropic manifolds reveal hidden cognitive constraints or attractors?  
+1. Can symbolic distances in associative space model cognitive entropy?
+2. How do topological centrality and clustering reflect symbolic anchoring and curvature of thought?
+3. Is it possible to derive measurable symbolic metrics that correlate with mental states?
+4. Can entropic manifolds reveal hidden cognitive constraints or attractors?
 
 ---
 
@@ -119,7 +119,7 @@ If you use this package, please cite:
 
 This subproject follows the **dual licensing** defined in the root repository:
 
-- **Code** (Python, notebooks, scripts): MIT License  
+- **Code** (Python, notebooks, scripts): MIT License
 - **Text and figures**: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 See the root `LICENSE` file for full terms.
@@ -128,8 +128,8 @@ See the root `LICENSE` file for full terms.
 
 ## 🧠 Author and Affiliation
 
-Developed by **Demetrios Agourakis**  
-São Leopoldo Mandic / PUC-SP  
+Developed by **Demetrios Agourakis**
+São Leopoldo Mandic / PUC-SP
 ORCID: [0000-0002-8596-5097](https://orcid.org/0000-0002-8596-5097)
 
 ---
