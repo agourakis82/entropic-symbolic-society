@@ -22,3 +22,15 @@ __pycache__/
 # Local backups
 __backup_*/
 **/__backup_*/
+
+# backups e lixos
+__backup_*/
+*.DS_Store
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+
