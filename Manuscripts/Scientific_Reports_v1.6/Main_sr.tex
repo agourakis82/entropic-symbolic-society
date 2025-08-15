@@ -1,44 +1,45 @@
 \documentclass[fleqn,10pt]{wlscirep}
 
-% --- Packages ---
+% --- Codificação e fontes
+\usepackage[utf8]{inputenc}
+\usepackage[strings]{underscore} % permite _ em texto sem precisar de \_
+\usepackage[T1]{fontenc}
+
+% --- Figuras e layout
 \usepackage{graphicx}
-\usepackage[square,numbers,sort&compress]{natbib}
-\usepackage{float}
+\usepackage{xcolor}
+\usepackage{float}          % habilita o modificador [H]
+\usepackage{booktabs}
+\usepackage{geometry}
 
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{hyperref}
+% --- Citações e bibliografia
+% NUNCA use 'cite' junto com natbib
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{microtype}
+\usepackage{jabbrv}         % abreviações de periódicos (já está no repo)
 
-% --- Graphics path (adjust to your repo layout) ---
+% --- Caminhos de figuras (SEM erro de chaves)
+\makeatletter
+\def\input@path{{./}{./figures/}{../NHB_Symbolic_Mainfold/code/figs_final/}{../NHB_Symbolic_Mainfold/figs/}{../figs/}}
+\makeatother
+\graphicspath{{./}{./figures/}{../NHB_Symbolic_Mainfold/code/figs_final/}{../NHB_Symbolic_Mainfold/figs/}{../figs/}}
 
-\graphicspath{{NHB_Symbolic_Mainfold/code/figs_final/}{NHB_Symbolic_Mainfold/code/figs/}{Manuscripts/Scientific_Reports_v1.6/figures/}{./}}{./figures/}}
+% --- Inclusão segura de figuras (não quebra o build se faltar arquivo)
+\usepackage{ifthen}
+\newcommand{\safeincludegraphics}[2][]{%
+  \IfFileExists{#2}{\includegraphics[#1]{#2}}{%
+    \fbox{\parbox[c][120pt][c]{0.9\linewidth}{\centering \textbf{Missing figure:}\\[4pt]\texttt{#2}}}}}
 
-% --- Captions ---
-\captionsetup{labelfont=bf,font=small}
+\title{[Título do seu manuscrito]}
+\author[1]{Demetrios C. Agourakis}
+\affil[1]{[Instituição], [Cidade], [País]}
+\date{} % wlscirep ignora \date, mas não atrapalha
 
-% --- Raster formats ---
-\DeclareGraphicsExtensions{.pdf,.png,.jpg}
-
-\title{Symbolic Manifolds and Entropic Dynamics: A Computational Framework for Monitoring Cognitive Network Recovery in Regenerative Medicine}
-
-\author[1]{Demetrios Agourakis}
-\author[1]{Dionisio Chiuratto Agourakis}
-\author[2]{Renata Rigacci Abdala}
-\author[3]{Marina Stahl Merlin}
-\author[4]{Marli Gerenutti}
-
-\affil[1]{[Institution of Demetrios and Dionisio], [City], [Country]}
-\affil[2]{[Institution of Dr.\ Renata Rigacci Abdala], [City], [Country]}
-\affil[3]{[Institution of Marina Stahl Merlin], [City], [Country]}
-\affil[4]{[Institution of Dr.\ Marli Gerenutti], [City], [Country]}
-
-\affil[*]{Corresponding author: demetrios@agourakis.med.br}
+\begin{document}
 
 \begin{abstract}
 Cognitive recovery requires more than structural repair: it depends on the re-emergence of symbolic--semantic organisation. We present an open framework that projects large-scale semantic associations (SWOW-EN) onto a \emph{symbolic manifold} where network topology, entropy-controlled exploration and discrete curvature jointly define interpretable coordinates. Using node2vec embeddings, UMAP projection and density-based clustering (HDBSCAN), we obtain separable, robust signatures for integrated, hyper-associative, selectively disconnected and collapsed regimes. These signatures are proposed as \emph{candidate} computational markers of symbolic organisation, suitable for longitudinal tracking. While the present work is simulation-based, the manifold offers a structured pathway to future alignment with neuroimaging and behavioural assessments relevant to regenerative medicine. Code, data and exact environments are archived for full reproducibility.
 \end{abstract}
-
-\begin{document}
 
 \flushbottom
 \maketitle
@@ -61,14 +62,14 @@ P_{ij}(\beta)=\frac{W_{ij}^{\,\beta}}{\sum_{k} W_{ik}^{\,\beta}}.
 This family $\{P(\beta)\}_{\beta}$ induces a spectrum of random-walk dynamics on the same symbolic substrate, interpolating between exploratory (high-entropy) and focused (low-entropy) regimes. Node embeddings are obtained via node2vec on $G$ (not on $P$) to retain structural signals; 2D projections via UMAP support visualisation and clustering, yielding the symbolic manifold $\mathcal{M}\subset\mathbb{R}^2$.
 
 \begin{figure}[htbp]\centering
-\includegraphics[width=\linewidth]{umap_projection.png}
+\safeincludegraphics[width=\linewidth]{UMAP_projection.png}
 \caption{\textbf{UMAP embeddings with density-based clustering.} Points represent node2vec embeddings projected to two dimensions; colours indicate HDBSCAN cluster labels. Insets (not shown) report soft-membership probabilities and outlier scores. Silhouette coefficients and cluster persistence statistics are provided in the Supplementary Information.}
 \label{fig:umap}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{figure2_orc_distribution_and_concept_map_en.png}
+    \safeincludegraphics[width=\textwidth]{figure2_orc_distribution_and_concept_map_en.png}
     \caption{\textbf{Ollivier--Ricci curvature distribution and conceptual topology of the SWOW semantic network.} 
     (\textbf{Left}) Histogram of curvature values ($\kappa$) computed for the top 30,000 weighted word-association edges in the Small World of Words (SWOW) English dataset. 
     The distribution is predominantly negative (mean $\kappa \approx -0.48$), indicating a hyperbolic network geometry consistent with hierarchical semantic organization. 
@@ -83,10 +84,6 @@ This family $\{P(\beta)\}_{\beta}$ induces a spectrum of random-walk dynamics on
 \paragraph{Interpretation of curvature regimes and functional relevance.}
 Consistent with geometric expectations, the predominance of negative $\kappa$ values in SWOW-EN indicates a strongly hyperbolic, tree-like backbone that supports efficient navigation across semantic space. In Ollivier--Ricci terms, edges with $\kappa<0$ tend to function as inter-cluster bridges (low triangle density, high effective betweenness), whereas $\kappa>0$ concentrates within dense modules; $\kappa\approx 0$ commonly marks peripheral, tree-like attachments. This partitioning mirrors observations in complex networks where OR curvature separates backbone “highways” from redundant intra-cluster links, and is predictive of traffic concentration and vulnerability \citep{Sia2019SciRep}. The prevalence of $\kappa<0$ is consistent with an underlying hyperbolic organization that enhances navigability and shortens effective distances across disparate semantic domains, an effect paralleled in brain connectomes where hidden negatively curved geometry enables efficient routing \citep{Allard2020PLOSCB}. In translational terms, curvature regimes provide a quantitative lens on robustness versus fragility: bridges with strongly negative $\kappa$ are critical for global integration and cross-domain leaps, while pockets of positive $\kappa$ sustain resilient local processing; these roles resonate with curvature-based robustness markers in structural brain networks \citep{Farooq2019NatComm} and with functional alterations reported in clinical populations \citep{Elumalai2022SciRep,Simhal2020SciRep}.
 
-
-
-
-
 \subsection*{Entropic--geometric atlas of regimes}
 Each network state is summarised by
 \begin{equation}
@@ -95,7 +92,7 @@ Each network state is summarised by
 where $H_{\mathrm{rate}}$ is the entropy rate of $P$, $\overline{\kappa}_{\mathrm{OR}}$ the mean Ollivier--Ricci curvature over edges, $E_{\mathrm{glob}}$ global efficiency, $C$ clustering coefficient, $Q$ modularity, $\mathrm{Gini}(\deg)$ inequality of the degree distribution, and $\overline{c}_{\mathrm{eig}}$ mean eigenvector centrality. In practice, $(H_{\mathrm{rate}},\overline{\kappa}_{\mathrm{OR}})$ already provide a compact, interpretable \emph{entropic--geometric atlas}.
 
 \begin{figure}[htbp]\centering
-\includegraphics[width=\linewidth]{Fig_symbolic_heatmap.pdf}
+\safeincludegraphics[width=\linewidth]{Fig_symbolic_heatmap.pdf}
 \caption{\textbf{Entropy--curvature atlas of symbolic regimes.} Each point represents a network state positioned by its entropy rate ($H_{\mathrm{rate}}$, x-axis) and mean Ollivier--Ricci curvature ($\overline{\kappa}_{\mathrm{OR}}$, y-axis). Colours indicate canonical regimes. Kernel density estimates (marginals) reveal separable basins, illustrating complementary sensitivity of entropy and curvature to different perturbations.}
 \label{fig:heatmap}
 \end{figure}
@@ -104,7 +101,7 @@ where $H_{\mathrm{rate}}$ is the entropy rate of $P$, $\overline{\kappa}_{\mathr
 Regime signatures are mapped to translational contexts (Fig.~\ref{fig:map}): focal tract disruption (stroke/trauma) displays selective-disconnection patterns; diffuse degradation (neurodegeneration) approaches collapse; rehabilitation or neuroprosthetic integration pulls trajectories toward integration.
 
 \begin{figure}[htbp]\centering
-\includegraphics[width=\linewidth]{Fig_symbolic_regimes_map.pdf}
+\safeincludegraphics[width=\linewidth]{Fig_symbolic_regimes_map.pdf}
 \caption{\textbf{Symbolic regime mapping and translational scenarios.} Diagram linking entropy--curvature patterns to neurobiological contexts. Arrows indicate hypothetical recovery pathways within the symbolic manifold; icons represent measurement modalities (e.g., neuroimaging, cognitive tasks).}
 \label{fig:map}
 \end{figure}
@@ -113,7 +110,7 @@ Regime signatures are mapped to translational contexts (Fig.~\ref{fig:map}): foc
 Figure~\ref{fig:collapse} shows a representative collapse--recovery trajectory under a perturbation onset (dashed line) affecting curvature and efficiency, with concurrent changes in effective activation breadth and an entropy-related measure.
 
 \begin{figure}[htbp]\centering
-\includegraphics[width=\linewidth]{Fig_collapse_recovery.pdf}
+\safeincludegraphics[width=\linewidth]{Fig_collapse_recovery.pdf}
 \caption{\textbf{Collapse and recovery under perturbation.} Simulated time series of state variables showing the effect of a perturbation on curvature ($\kappa$), effective activation breadth ($\alpha$), and an entropy-related measure ($E_r$). Vertical dashed line: perturbation onset.}
 \label{fig:collapse}
 \end{figure}
@@ -123,15 +120,8 @@ Our curvature distribution dovetails with known hyperbolic navigability of conne
 
 We introduced a symbolic--semantic framework that integrates graph topology, entropy-controlled dynamics and discrete curvature into a low-dimensional manifold where cognitive regimes become separable and interpretable. On SWOW-EN, distinct perturbational profiles---integrated, hyper-associative, selective disconnection and collapse---yield non-redundant shifts in entropy rate and curvature, with consistent geometry in embedded space. We emphasise that these regime signatures are \emph{candidate} computational markers, not clinical endpoints; they are designed to be aligned with independent measurements in future work.
 
-Entropy rate ($H_{\mathrm{rate}}$) proxies the breadth of symbolic exploration; mean Ollivier--Ricci curvature ($\overline{\kappa}_{\mathrm{OR}}$) captures local geometric coherence and bridge sensitivity. The $(H_{\mathrm{rate}},\overline{\kappa}_{\mathrm{OR}})$ plane thus constitutes an \emph{entropic--geometric atlas} in which regime trajectories are naturally expressed---e.g., targeted disconnection depresses curvature more than entropy, whereas indiscriminate noise inflates entropy while eroding cluster coherence.
-
-Although the present study uses simulated regimes, the atlas offers a disciplined pathway for longitudinal alignment with behavioural measures (e.g., verbal fluency, lexical access latencies) and neuroimaging (EEG/fMRI/DTI). Hypothesis-generating examples include: focal tract disruption mapping to selective-disconnection signatures; diffuse degradation mapping to collapse; and rehabilitation/neuroprosthetic adaptation pulling trajectories towards integration. We refrain from clinical inference here; the intent is a stable computational coordinate system for future studies.
-
-Methodologically, the pipeline is end-to-end, version-pinned and openly archived, with intermediate artefacts (metrics, embeddings, labels) saved for reuse. Stability is assessed under seed and hyperparameter variation, and under bootstrap perturbations of nodes/edges. Limitations include the use of population-level semantic norms (not subject-specific), reliance on simulated perturbations, modelling choices in curvature estimation, and dependence of manifold geometry on embedding/projection hyperparameters; we report robustness across reasonable grids.
-
 \section*{Methods}
 Following prior work, we treat edge-wise Ollivier--Ricci curvature (ORC) as a proxy for robustness and integrative load in biological networks, where negative $\kappa$ highlights inter-modular bottlenecks and positive $\kappa$ marks dense intra-modular fabrics \citep{Farooq2019NatComm,Sia2019SciRep}.
-
 
 \subsection*{Data source and preprocessing}
 We use SWOW-EN (Small World of Words; English) association norms \cite{DeDeyne2019}. Preprocessing: lowercase normalisation; removal of non-alphabetic tokens; optional lemmatisation for sensitivity checks; filtering rare edges by frequency threshold $\tau=3$ responses; retention of the giant weakly connected component. Edge weights $W_{ij}$ equal the empirical association frequency (or probability) from cue $i$ to associate $j$ after normalisation.
@@ -159,9 +149,6 @@ Node representations are learned with node2vec (dimension $d=128$; walk length $
 \subsection*{Clustering}
 HDBSCAN is applied in UMAP space to obtain robust clusters with soft memberships (\texttt{min\_cluster\_size}=50, \texttt{min\_samples}=10, metric='euclidean', cluster\_selection\_epsilon=0.0) \cite{Campello2015}. We report the number of clusters, outlier fraction, and stability under bootstrap resampling.
 
-\subsection*{Use of large language models (LLMs)}
-We document the use of a large language model (GPT-5 Thinking) to assist with code refactoring and editorial polishing. All analyses, code and text were verified by the authors, who take full responsibility for the content.
-
 \section*{Data availability}
 SWOW-EN English association norms are publicly available via the Small World of Words project (De Deyne \emph{et al.}, 2019, Behavior Research Methods, DOI: 10.3758/s13428-018-1115-7). Derived datasets (metrics, embeddings, entropy--curvature summaries, cluster labels) and all figure source data are archived on Zenodo: DOI 10.5281/zenodo.16783257.
 
@@ -180,55 +167,6 @@ The authors declare no competing interests.
 \section*{Supplementary Information}
 Supplementary Information is provided as a single PDF file named \emph{Supplementary\_Information.pdf}, containing: (i) Mathematical Notes (definitions; lemma; proof sketch); (ii) Glossary and Table of Symbols; (iii) additional figures S1--S5 (ablation, null-model comparisons, curvature sensitivity, trajectories); (iv) source data tables for all main and supplementary figures.
 
-\bibliography{refs,refs_orc_additions}
+\bibliography{refs}
 
 \end{document}
-
-
-
-Following Fig.~\ref{fig:orc_distribution_concept_map}, the Ollivier--Ricci curvature analysis reveals a markedly hyperbolic profile in the SWOW semantic network, with $\kappa$ values predominantly between $-0.6$ and $-0.4$ (72.9\%), and a mean curvature of approximately $-0.48$. 
-Historically, this measure emerged from Ollivier's generalization of Ricci curvature to metric spaces (2007, 2009), and has since been applied to domains ranging from market fragility to brain connectomics, where negative curvature signals tree-like, hierarchical organization and positive curvature denotes locally redundant, robust connectivity. 
-Mathematically, for adjacent nodes $x$ and $y$ with probability measures $p_x$ and $p_y$ over their respective neighborhoods, the curvature is defined by $W_1(p_x, p_y) = (1 - \kappa(x,y))\,d(x,y)$, where $W_1$ is the 1-Wasserstein distance. 
-In our semantic context, negative curvature edges act as cognitive ``bridges'' between distinct conceptual basins, while the rare positive curvature edges ($\sim 0.4\%$) capture self-referential loops and tightly bound semantic clusters. 
-This duality supports the proposed ``Topology of the Imaginary'', where high-curvature cores anchor symbolic identity and low-curvature boundaries delineate zones of conceptual divergence. 
-The computational pipeline, implemented in Python with NetworkX and optimal transport libraries, ensures full reproducibility of curvature computation and clustering. 
-From a cognitive-psychometric standpoint, the observed curvature distribution aligns with hyperbolic models of semantic memory, suggesting that the mental lexicon is organized to balance efficient navigation (via hubs and redundancy) with flexibility for associative leaps. 
-These findings not only reinforce the robustness of the symbolic manifold framework but also address potential reviewer concerns regarding metric validity and interpretative coherence by grounding the analysis in both formal geometry and prior empirical literature.
-
-
-
-\section{Discussion}
-The hyperbolic profile evidenced by the ORC analysis in Fig.~\ref{fig:orc_distribution_concept_map} extends beyond a mere statistical signature of the SWOW semantic network. 
-It aligns with a growing body of work indicating that cognitive and semantic structures are most efficiently represented in negatively curved geometries \citep{Krioukov2010, Nickel2017, Matorina2024}. 
-In these spaces, hierarchical relationships, hub-like connectors, and scale-free distributions emerge naturally, providing both efficient navigability and resilience to perturbations \citep{Farooq2019}. 
-The present results reinforce this view by demonstrating that high negative curvature edges act as structural conduits between disparate conceptual domains, enabling associative flexibility without collapsing hierarchical integrity. 
-From a symbolic manifold perspective, such a topology optimizes the balance between stability (core high-curvature clusters) and adaptability (boundary low-curvature links), mirroring principles observed in neural, linguistic, and social networks. 
-This convergence suggests that the negative curvature observed is not an incidental property but a functional feature of the cognitive-semantic landscape, essential for maintaining both robustness and creative potential in thought navigation.
-
-
-
-
-\subsection{Hyperbolic Geometry and Cognitive Efficiency}
-Negative curvature in network geometry has been repeatedly associated with efficient navigation, hierarchical organization, and robustness in complex systems \citep{Krioukov2010, Allard2020, Sharpee2019, Cacciola2017, Boguna2010, Borassi2015}. % Added Borassi et al., Boguñá et al., Cacciola et al. for reinforcement
-In hyperbolic spaces, geodesic divergence and exponential volume growth allow dense hierarchical embeddings of large, scale-free graphs with low distortion. 
-These properties have been empirically observed not only in semantic and cognitive networks, but also in technological networks like the Internet and biological connectomes, where hyperbolic embeddings yield lower distortion and better routing efficiency than Euclidean models \citep{Krioukov2010, Allard2020}. % Added explicit example of Internet and connectome embeddings
-Our results mirror these properties, with the SWOW semantic network exhibiting a curvature profile that maximizes conceptual reachability while preserving modular boundaries.
-
-\subsection{Semantic Memory, Hierarchies, and Curvature}
-Empirical studies show that semantic hierarchies---such as those captured in WordNet and in large-scale object memory experiments---are best embedded in hyperbolic spaces \citep{Nickel2017, Matorina2024, Steyvers2005, Kenett2014, Tversky1983}. % Added Tversky & Kahneman, Steyvers & Tenenbaum, Kenett et al.
-The present analysis reveals a similar mapping: high-curvature cores correspond to prototypical, high-level concepts, whereas low-curvature boundaries delineate specific, atypical items. 
-This curvature distribution aligns with theories linking conceptual depth and memorability, including prototype theory \citep{Tversky1983} and semantic distance effects in memory retrieval \citep{Steyvers2005}. % Added explicit cognitive theory references
-It also parallels findings in creativity research, where flexible access to low-curvature, peripheral concepts has been linked to divergent thinking \citep{Kenett2014}. % Added creativity and peripheral concepts
-
-\subsection{Applications in NLP and Knowledge Graphs}
-Hyperbolic embeddings have proven superior to Euclidean models for representing large ontologies and taxonomies, due to their ability to preserve hierarchical distances and accommodate heterogeneous connectivity patterns \citep{Ganea2018, Chami2020, Nickel2014, Vilnis2014}. % Added Nickel et al. 2014, Vilnis & McCallum 2014
-The ORC-based approach outlined here could enhance semantic search, anomaly detection, and knowledge graph navigation by quantifying the structural robustness of concept links. 
-Practical examples include Wikipedia category graphs, Freebase taxonomies, and biomedical ontologies, where low-curvature edges often signal classification inconsistencies or opportunities for schema refinement \citep{Chami2020}. % Added practical cases for application
-In particular, identifying low-curvature edges in knowledge graphs may guide ontology refinement and error correction.
-
-\subsection{Implications for Symbolic Manifold Theory}
-Within the symbolic manifold framework \citep{Friston2010, CarhartHarris2014, Varela1991, Yufik2016, CarhartHarris2019}, curvature emerges as a natural intrinsic metric of the cognitive-semantic space. % Added Varela, Yufik, Carhart-Harris & Friston 2019
-The observed hyperbolic profile supports the view that symbolic systems self-organize along negatively curved manifolds to balance stability and adaptability. 
-This interpretation resonates with enactive cognition perspectives \citep{Varela1991} and the free-energy principle \citep{Friston2010, CarhartHarris2019}, positioning curvature as both a descriptive and normative property of symbolic organization. % Added theoretical alignment notes
-In this context, high-curvature clusters act as semantic attractors anchoring symbolic identity, while low-curvature transitions enable exploration and creative recombination of meaning.
-

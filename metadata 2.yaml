@@ -1,0 +1,232 @@
+title: "M02_entropy_vector — Entropy as a Fractal Organizing Vector"
+upload_type: publication
+publication_type: other
+description: |
+  This second modular entry deepens the symbolic, clinical, and topological framing of entropy as a fractal organizing vector. It articulates how recursive entropy dynamics manifest in trauma, giftedness, psychiatric collapse, and symbolic cognition. Module M02 sets the stage for formal modeling (M03) by integrating phenomenological, neurobiological, and thermodynamic dimensions of symbolic behavior.
+
+creators:
+  - name: "Demetrios Chiuratto Agourakis"
+    affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
+    orcid: "0000-0002-8596-5097"
+    email: demetrios@agourakis.med.br
+
+keywords:
+  - symbolic entropy
+  - fractal cognition
+  - recursive neurodynamics
+  - giftedness
+  - trauma modeling
+  - symbolic systems theory
+  - entropic psychiatry
+  - philosophical complexity
+
+license: "CC-BY-4.0"
+access_right: open
+language: eng
+
+doi: 10.5281/zenodo.16541976
+related_identifiers:
+  - relation: isPartOf
+    identifier: https://doi.org/10.5281/zenodo.16533374
+  - relation: isIdenticalTo
+    identifier: https://doi.org/10.5281/zenodo.16541976
+
+version: M02_v1
+
+notes: >
+  This submission is part of a modular series of symbolic-scientific manuscripts exploring the entropic geometry of cognition, society, and giftedness.
+
+---
+title: "M03_symbolic_modeling — Symbolic Modeling of Mental States: Entropic Dynamics, Tensorial Geometry, and Diagnostic Topology"
+upload_type: publication
+publication_type: other
+description: |
+  This third modular entry formalizes the symbolic modeling of mental states as recursive, entropically modulated configurations within a socio-symbolic manifold. It introduces symbolic wavefunctions, tensorial curvature, and diagnostic topology as tools to reinterpret psychiatric states, giftedness, and singularities of cognition. M03 serves as the conceptual core of the entropic-symbolic project and prepares the epistemological basis for computational modeling in M04.
+
+creators:
+  - name: "Demetrios Chiuratto Agourakis"
+    affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
+    orcid: "0000-0002-8596-5097"
+    email: demetrios@agourakis.med.br
+
+keywords:
+  - symbolic modeling
+  - entropy and cognition
+  - tensorial psychiatry
+  - Schrödinger symbolic dynamics
+  - diagnostic topology
+  - giftedness
+  - symbolic phase space
+  - entropic recursion
+
+license: "CC-BY-4.0"
+access_right: open
+language: eng
+
+doi: 10.5281/zenodo.16567866
+related_identifiers:
+  - relation: isPartOf
+    identifier: https://doi.org/10.5281/zenodo.16533374
+  - relation: isIdenticalTo
+    identifier: https://doi.org/10.5281/zenodo.16567866
+
+version: M03_v1
+
+notes: >
+  This entry completes the symbolic formalism initiated in M02 and lays the structural groundwork for computational epistemology in M04. It is part of a modular series archived under the entropic-symbolic-society project.
+
+---
+title: "M04_symbolic_epistemology — Symbolic Epistemology and Recursive Cognition: Anchoring, Entropy, and Topological Dynamics"
+upload_type: publication
+publication_type: other
+description: |
+  This revised version incorporates all editorial recommendations following an internal peer review modeled after *Nature Human Behaviour*. The module deepens its theoretical articulation of symbolic epistemology by introducing simulations of symbolic bifurcation, diagnostic typologies of cognitive singularities (e.g., insight, psychosis, identity collapse), and cartographic modeling via TDA. Together, these layers solidify the module as a computational and epistemic backbone for mapping fractal cognition.
+
+creators:
+  - name: "Demetrios Chiuratto Agourakis"
+    affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
+    orcid: "0000-0002-8596-5097"
+    email: demetrios@agourakis.med.br
+
+keywords:
+  - symbolic epistemology
+  - recursive entropy
+  - epistemic anchoring
+  - symbolic curvature
+  - topological cognition
+  - cognitive phase transitions
+  - TDA in psychiatry
+  - fractal diagnostic cartography
+
+license: "CC-BY-4.0"
+access_right: open
+language: eng
+
+doi: 10.5281/zenodo.16619481
+related_identifiers:
+  - relation: isPartOf
+    identifier: https://doi.org/10.5281/zenodo.16533374
+  - relation: isIdenticalTo
+    identifier: https://doi.org/10.5281/zenodo.16619481
+
+version: M04_v1.2
+
+notes: >
+  This entry finalizes the epistemological architecture of the entropic-symbolic-society project and bridges into computational cognitive modeling. It includes formal diagnostics, symbolic forecasting, topological representations of cognitive singularities, and culminates with the foundational epistemic thesis that cognition is recursive navigation through a curved semantic manifold.
+
+---
+title: "M05_symbolic_clinical_translation — Symbolic Collapse, Recovery, and Computational Trajectories in Clinical Psychiatry"
+upload_type: publication
+publication_type: other
+description: |
+  This module introduces a symbolic-clinical framework for understanding psychiatric collapse and reorganization through the lens of entropic dynamics. It incorporates formal models of symbolic deviation γ(t), entropic curvature (κ), anchoring coefficients (α), and recovery vectors in phase space. The work integrates deep clinical phenomenology with computational psychiatry, including NLP-based entropy metrics, recurrence quantification, and topological state transitions. The module closes with an implemented simulation and pseudocode to illustrate the dynamical modeling of symbolic states in high-entropy conditions.
+
+creators:
+  - name: "Demetrios Chiuratto Agourakis"
+    affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
+    orcid: "0000-0002-8596-5097"
+    email: demetrios@agourakis.med.br
+
+keywords:
+  - symbolic psychiatry
+  - entropy in clinical states
+  - collapse and recovery
+  - symbolic deviation γ(t)
+  - computational clinical modeling
+  - NLP in psychiatry
+  - entropic curvature
+  - phase-space trajectories
+
+license: "CC-BY-4.0"
+access_right: open
+language: eng
+
+doi: 10.5281/zenodo.16623243
+related_identifiers:
+  - relation: isPartOf
+    identifier: https://doi.org/10.5281/zenodo.16533374
+  - relation: isIdenticalTo
+    identifier: https://doi.org/10.5281/zenodo.16623243
+
+version: M05_v1
+
+notes: >
+  This fifth module closes the symbolic-clinical translation arc of the entropic-symbolic project, integrating computational psychiatry, phase-state dynamics, and symbolic formalism into a reproducible model of epistemic disintegration and repair.
+
+---
+title: "M06_symbolic_profiles — Symbolic Profiles of Cognitive Singularity: Entropic Simulation and Topological Diagnostics"
+upload_type: publication
+publication_type: other
+description: |
+  This sixth module deepens the entropic-symbolic framework by simulating symbolic trajectories and modeling epistemic singularities via vector fields in symbolic phase space. It introduces dynamic models of γ(t), collapse/recovery vectors, recursive entropy topographies, and diagnostic simulations of twice-exceptionality. The module includes reproducible Python code and formalizes epistemic attractors, bifurcations, and symbolic flow lines across anchoring and curvature gradients.
+
+creators:
+  - name: "Demetrios Chiuratto Agourakis"
+    affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
+    orcid: "0000-0002-8596-5097"
+    email: demetrios@agourakis.med.br
+
+keywords:
+  - symbolic dynamics
+  - cognitive singularity
+  - symbolic deviation γ(t)
+  - recursive entropy
+  - vector field cognition
+  - entropic attractors
+  - bifurcation states
+  - symbolic psychiatry
+
+license: "CC-BY-4.0"
+access_right: open
+language: eng
+
+doi: 10.5281/zenodo.16633012
+related_identifiers:
+  - relation: isPartOf
+    identifier: https://doi.org/10.5281/zenodo.16533374
+  - relation: isIdenticalTo
+    identifier: https://doi.org/10.5281/zenodo.16633012
+
+version: M06_v1.1
+
+notes: >
+  This module introduces dynamic symbolic simulation and epistemic field modeling, consolidating the symbolic diagnostic architecture of the entropic-symbolic-society project.
+
+---
+title: "NHB_Symbolic_Mainfold — Symbolic Manifolds and Entropic Dynamics: A Cognitive Topology of Mental States"
+upload_type: publication
+publication_type: article
+description: |
+  This full-length manuscript proposes a symbolic-topological framework for modeling cognitive dynamics as trajectories across a structured manifold defined by semantic anchoring, associative curvature, and recursive entropy. Simulations reproduce neurotypical, gifted, twice-exceptional, and collapse-prone regimes. The model offers a generative mechanism for cognitive variability, bridges symbolic cognition and neural entropy, and proposes translational pathways for symbolic biomarkers. The study lays the groundwork for a novel research program termed “topological symbolic psychiatry.”
+
+creators:
+  - name: "Demetrios Chiuratto Agourakis"
+    affiliation: "Pontifícia Universidade Católica de São Paulo (PUC-SP), Mestrado em Biomateriais e Medicina Regenerativa"
+    orcid: "0000-0002-8596-5097"
+    email: demetrios@agourakis.med.br
+
+keywords:
+  - symbolic cognition
+  - entropy
+  - neurodiversity
+  - bifurcation
+  - symbolic manifold
+  - computational psychiatry
+  - symbolic biomarkers
+  - cognitive topology
+
+license: "CC-BY-4.0"
+access_right: open
+language: eng
+
+doi: 10.5281/zenodo.16730036
+related_identifiers:
+  - relation: isPartOf
+    identifier: https://doi.org/10.5281/zenodo.16533374
+  - relation: isIdenticalTo
+    identifier: https://doi.org/10.5281/zenodo.16730036
+
+version: NHB_v1
+
+notes: >
+  This manuscript is the primary integrative product of the entropic-symbolic-society project, prepared for submission to Nature Human Behaviour. It integrates prior modular publications and completes the theoretical and translational arc from symbolic topology to empirical modeling.

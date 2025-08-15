@@ -1,2 +1,21 @@
-*.csv filter=lfs diff=lfs merge=lfs -text
-*.gpickle filter=lfs diff=lfs merge=lfs -text
+# Normalize to LF for text files
+*.tex     text eol=lf
+*.bib     text eol=lf
+Makefile  text eol=lf
+*.sh      text eol=lf
+*.py      text eol=lf
+*.md      text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.txt     text eol=lf
+
+# Treat images/PDFs as binary
+*.pdf  binary -diff
+*.png  binary -diff
+*.jpg  binary -diff
+*.jpeg binary -diff
+
+# Figures directories contain binary assets
+NHB_Symbolic_Mainfold/code/figs/*        -text
+NHB_Symbolic_Mainfold/code/figs_final/*  -text
+Manuscripts/Scientific_Reports_v1.6/figures/* -text

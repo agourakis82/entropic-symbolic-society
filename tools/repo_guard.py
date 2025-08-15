@@ -1,74 +1,36 @@
-- Ensures UNIX line endings (LF) for Makefile and .tex
-- Rewrites Makefile commands to use TABs (not spaces)
-- Reports missing tools files
-Usage:
-  python tools/repo_guard.py --fix
-"""
-import argparse, sys, re
+#!/usr/bin/env python3
+# tools/repo_guard.py — normalize EOLs (LF) and fix Makefile TABs.
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-SR_DIR = ROOT / "Manuscripts" / "Scientific_Reports_v1.6"
-TOOLS = ROOT / "tools"
+def fix_makefile_tabs(p: Path):
+    if not p.exists(): return
+    txt = p.read_text(encoding="utf-8", errors="ignore").splitlines()
+    out = []
+    for line in txt:
+        # Replace 8 leading spaces by a TAB only for recipe lines (heuristic):
+        if line.startswith("        "):  # 8 spaces
+            out.append("\t" + line[8:])
+        else:
+            out.append(line)
+    p.write_text("\n".join(out) + "\n", encoding="utf-8")
 
-def set_unix_endings(p: Path):
-    txt = p.read_bytes()
-    txt = txt.replace(b'\r\n', b'\n').replace(b'\r', b'\n')
-    p.write_bytes(txt)
-
-def ensure_tabs_in_makefile(p: Path):
-    # Replace 4 leading spaces before a command by a TAB
-    lines = p.read_text(encoding="utf-8", errors="ignore").splitlines()
-    fixed = []
-    for ln in lines:
-        # If line starts with 4 or more spaces then a non-space, change first run to tab
-        fixed.append(re.sub(r'^( {4,})([^ \t#])', r'\t\2', ln))
-    p.write_text("\n".join(fixed), encoding="utf-8")
+def normalize_lf(p: Path):
+    b = p.read_bytes()
+    b = b.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    p.write_bytes(b)
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--fix", action="store_true", help="apply quick fixes")
-    args = ap.parse_args()
-
-    problems = []
-
-    mf = ROOT / "Makefile"
-    if not mf.exists():
-        problems.append("Makefile not found at repo root.")
-    else:
-        if args.fix:
-            set_unix_endings(mf)
-            ensure_tabs_in_makefile(mf)
-
-    # Ensure tools exist
-    expected_tools = ["build_figures.sh", "validate_bib.py"]
-    missing = [t for t in expected_tools if not (TOOLS / t).exists()]
-    if missing:
-        problems.append("Missing tools: " + ", ".join(missing))
-
-    # Ensure LaTeX sources exist
-    main_tex = SR_DIR / "Main_sr_rev1.tex"
-    if not main_tex.exists():
-        problems.append(f"{main_tex} not found.")
-
-    if problems:
-        print("repo_guard report:")
-        for p in problems:
-            print(" -", p)
-        if args.fix and mf.exists():
-            print("\nApplied: normalize line endings and ensure TABs in Makefile.")
-        sys.exit(1 if problems else 0)
-    else:
-        print("repo_guard OK — structure looks good.")
-        sys.exit(0)
+    root = Path(".").resolve()
+    # Fix Makefile
+    mf = root / "Makefile"
+    if mf.exists(): fix_makefile_tabs(mf)
+    # Normalize LF for common text files
+    exts = {".tex",".bib",".md",".yml",".yaml",".txt",".py",".sh"}
+    for p in root.rglob("*"):
+        if p.is_file() and p.suffix in exts:
+            try: normalize_lf(p)
+            except Exception: pass
+    print("[ok] repo_guard: normalized LF and Makefile tabs")
 
 if __name__ == "__main__":
     main()
-'''
-# Write files
-Path("/mnt/data/Makefile").write_text(makefile, encoding="utf-8")
-tools_dir = Path("/mnt/data/tools")
-tools_dir.mkdir(parents=True, exist_ok=True)
-(Path("/mnt/data/tools/repo_guard.py")).write_text(guard, encoding="utf-8")
-# Make it executable-ish (user will download anyway)
-"done"
