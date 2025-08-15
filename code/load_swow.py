@@ -1,6 +1,7 @@
+import pickle
 from pathlib import Path
 
-import networkx as nx
+import networkx as nx  # noqa: E402  # noqa: E402
 import pandas as pd
 
 # Caminho para o CSV
@@ -30,7 +31,6 @@ for _, row in df.iterrows():
 # Cria diretório de saída se necessário
 Path(out_path).parent.mkdir(parents=True, exist_ok=True)
 
-import pickle
 
 with open(out_path, "wb") as f:
     pickle.dump(G, f)

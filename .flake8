@@ -1,7 +1,15 @@
+# .flake8
 [flake8]
-max-line-length = 100
-# compat com black (evita falsos-positivos em fatias/operadores)
-extend-ignore = E203, W503
-# import tardio neste arquivo é intencional (ou pesado/opcional)
-per-file-ignores =
-    code/load_swow.py:E402
+max-line-length = 120
+extend-ignore =
+    E501,  # comprimento de linha (vamos deixar o Black decidir)
+    W503,  # quebra de linha antes do operador (padrão do Black)
+    B950   # redundante com max-line-length
+select = C,E,F,W,B
+exclude =
+    __backup_*,
+    NHB_Symbolic_Mainfold/__backup_*,
+    .git,
+    .venv,
+    build,
+    dist

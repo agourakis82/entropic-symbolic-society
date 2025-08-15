@@ -173,7 +173,7 @@ def mean_ollivier_ricci(
             return (float("nan"), f"ollivier_{method}{note}_empty")
         return (float(np.mean(vals)), f"ollivier_{method}{note}")
     except Exception as e:
-        warnings.warn(f"OllivierRicci failed: {e}")
+        warnings.warn(f"OllivierRicci failed: {e}", stacklevel=2)
         return (float("nan"), f"ollivier_{method}_error")
 
 
