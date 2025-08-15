@@ -1,36 +1,33 @@
-# macOS
-.DS_Store
+# Python
+__pycache__/
+*.pyc
 
-# LaTeX build artifacts
+# Envs
+.venv/
+.env/
+
+# LaTeX/latexmk
 *.aux
 *.bbl
 *.blg
-*.fdb_latexmk
-*.fls
-*.log
-*.out
-*.synctex.gz
 *.toc
-*.lof
-*.lot
-*.pdf
+*.out
+*.fls
+*.fdb_latexmk
+*.log
+*.synctex.gz
 
-# Python
-.venv/
-__pycache__/
+# Figures & intermediates gerados (mantemos PDFs finais e figuras em Manuscripts/)
+figs/
+!Manuscripts/**/figures/**
 
-# Local backups
+# Backups locais
 __backup_*/
 **/__backup_*/
+**/notebooks_old/
 
-# backups e lixos
-__backup_*/
-*.DS_Store
-*.aux
-*.bbl
-*.blg
-*.log
-*.out
-*.fls
-*.fdb_latexmk
+# Mac / SO
+.DS_Store
 
+# Pre-commit cache
+.pre-commit-config.yaml.bak
