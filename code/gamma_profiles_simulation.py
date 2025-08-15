@@ -1,13 +1,15 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 # Time vector
 t = np.linspace(0, 10, 500)
+
 
 # Gamma function: symbolic deviation
 def gamma(t, alpha, kappa, noise_amplitude=0.0):
     noise = noise_amplitude * np.random.normal(0, 1, len(t))
     return np.exp(-alpha * t) * np.sin(kappa * t) + noise
+
 
 # Simulated profiles
 gamma_2e = gamma(t, alpha=0.8, kappa=2.5, noise_amplitude=0.05)

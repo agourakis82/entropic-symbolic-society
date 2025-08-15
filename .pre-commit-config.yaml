@@ -1,41 +1,22 @@
-default_stages: [pre-commit]
-exclude: >
-  (?x)^(
-    __backup_.*/|
-    NHB_Symbolic_Mainfold/__backup_.*/|
-    NHB_Symbolic_Mainfold/.*/notebooks_old/|
-    .*/notebooks_old/|
-    .*\.ipynb_checkpoints/|
-    ^figs/|
-    ^.venv/
-  )
-
 repos:
-  - repo: local
-    hooks:
-      - id: normalize-lf
-        name: normalize LF line endings
-        entry: bash -c '[ -f tools/repo_guard.py ] && python3 tools/repo_guard.py --fix || true'
-        language: system
-        pass_filenames: false
-        stages: [pre-commit]
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v6.0.0
+    rev: v4.6.0
     hooks:
       - id: check-yaml
       - id: check-json
       - id: end-of-file-fixer
       - id: trailing-whitespace
       - id: mixed-line-ending
+      - id: check-merge-conflict
 
   - repo: https://github.com/psf/black
-    rev: 25.1.0
+    rev: 24.8.0
     hooks:
       - id: black
         language_version: python3
 
   - repo: https://github.com/pycqa/isort
-    rev: 6.0.1
+    rev: 5.13.2
     hooks:
       - id: isort
 
@@ -45,9 +26,29 @@ repos:
       - id: autoflake
         args: [--in-place, --remove-all-unused-imports, --remove-unused-variables]
 
-  - repo: https://github.com/PyCQA/flake8
-    rev: 7.3.0
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.1.1
     hooks:
       - id: flake8
-        additional_dependencies:
-          - flake8-bugbear==24.4.26
+        args:
+          - --max-line-length=120
+          - --extend-ignore=E501,W503,B950
+
+# Ignore global para “ruídos”
+exclude: |
+  (?x)(
+    ^__backup_.*|
+    /__backup_.*|
+    ^.*?/__backup_.*|
+    ^NHB_Symbolic_Mainfold/.*/notebooks_old/.*|
+    ^.*\.pdf$|
+    ^.*\.png$|
+    ^.*\.jpg$|
+    ^.*\.zip$|
+    ^.*\.tar\.gz$|
+    ^.*\.ipynb_checkpoints/.*|
+    ^.venv/.*|
+    ^build/.*|
+    ^dist/.*|
+    ^.*\.aux$|^.*\.bbl$|^.*\.blg$|^.*\.fls$|^.*\.fdb_latexmk$|^.*\.out$|^.*\.toc$
+  )

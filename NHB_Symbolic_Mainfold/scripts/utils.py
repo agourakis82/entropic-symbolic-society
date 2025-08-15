@@ -10,13 +10,13 @@ This module centralizes common functionality used across notebooks:
 
 from __future__ import annotations
 
-import os
-import sys
 import json
-import random
 import logging
+import os
+import random
+import sys
 from pathlib import Path
-from typing import Tuple, List, Optional, Dict
+from typing import Dict, List, Tuple
 
 import numpy as np
 import pandas as pd
@@ -55,6 +55,7 @@ if not _log.handlers:
 # -----------------------------------------------------------------------------
 # Paths & Environment
 # -----------------------------------------------------------------------------
+
 
 def get_root_path() -> Path:
     """
@@ -112,6 +113,7 @@ def resolve_paths() -> Tuple[Path, Path, Path]:
 # Reproducibility
 # -----------------------------------------------------------------------------
 
+
 def set_seeds(seed: int = 42) -> None:
     """
     Set global random seeds for reproducibility across common libraries.
@@ -121,6 +123,7 @@ def set_seeds(seed: int = 42) -> None:
     np.random.seed(seed)
     try:
         import torch  # type: ignore
+
         torch.manual_seed(seed)
         if torch.cuda.is_available():
             torch.cuda.manual_seed_all(seed)  # type: ignore[attr-defined]
@@ -132,6 +135,7 @@ def set_seeds(seed: int = 42) -> None:
 # -----------------------------------------------------------------------------
 # Data I/O
 # -----------------------------------------------------------------------------
+
 
 def save_dataframe(df: pd.DataFrame, path: Path, index: bool = False) -> None:
     """
@@ -172,7 +176,9 @@ def load_graphml(path: Path):
                 d["weight"] = float(d["weight"])
             except Exception:
                 pass
-    _log.info(f"Loaded graph: {path} | nodes={G.number_of_nodes()} edges={G.number_of_edges()}")
+    _log.info(
+        f"Loaded graph: {path} | nodes={G.number_of_nodes()} edges={G.number_of_edges()}"
+    )
     return G
 
 
@@ -191,6 +197,7 @@ def save_graphml(G, path: Path) -> None:
 # -----------------------------------------------------------------------------
 # Metadata helpers
 # -----------------------------------------------------------------------------
+
 
 def find_embedding_columns(df: pd.DataFrame, prefix: str = "emb_") -> List[str]:
     """

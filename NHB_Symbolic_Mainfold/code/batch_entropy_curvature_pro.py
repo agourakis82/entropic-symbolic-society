@@ -2,17 +2,21 @@
 # batch_entropy_curvature_pro.py
 # Executa compute_entropy_curvature_pro.py a partir de um YAML.
 
-import argparse, subprocess, sys, shlex
+import argparse
+import shlex
+import subprocess
+import sys
 from pathlib import Path
 
 try:
     import yaml
-except Exception as e:
+except Exception:
     print("PyYAML requerido: pip install pyyaml", file=sys.stderr)
     sys.exit(2)
 
 HERE = Path(__file__).parent.resolve()
 PY = HERE / "compute_entropy_curvature_pro.py"
+
 
 def main():
     ap = argparse.ArgumentParser()
@@ -24,26 +28,35 @@ def main():
     outs = []
     for job in cfg.get("jobs", []):
         graph = job["graph"]
-        regime = job.get("regime","")
-        betas = " ".join(map(str, job.get("beta",[1.0])))
+        regime = job.get("regime", "")
+        betas = " ".join(map(str, job.get("beta", [1.0])))
         out = job.get("out", "entropy_curvature.csv")
         no_curv = job.get("no_curvature", False)
         curv_undirected = job.get("curv_undirected", True)
         curv_sample = str(job.get("curv_sample", 2000))
-        ricci_method = job.get("ricci_method","OTD")
+        ricci_method = job.get("ricci_method", "OTD")
         seed = str(job.get("seed", 42))
 
-        cmd = [sys.executable, str(PY),
-               "--graph", graph, "--beta"] + betas.split() + [
-               "--out", out, "--regime", regime,
-               "--ricci-method", ricci_method,
-               "--curv-sample", curv_sample,
-               "--seed", seed
-        ]
+        cmd = (
+            [sys.executable, str(PY), "--graph", graph, "--beta"]
+            + betas.split()
+            + [
+                "--out",
+                out,
+                "--regime",
+                regime,
+                "--ricci-method",
+                ricci_method,
+                "--curv-sample",
+                curv_sample,
+                "--seed",
+                seed,
+            ]
+        )
         if curv_undirected:
-            cmd.insert(len(cmd)-2, "--curv-undirected")
+            cmd.insert(len(cmd) - 2, "--curv-undirected")
         if no_curv:
-            cmd.insert(len(cmd)-2, "--no-curvature")
+            cmd.insert(len(cmd) - 2, "--no-curvature")
 
         print(">>", " ".join(shlex.quote(c) for c in cmd))
         subprocess.run(cmd, check=True)
@@ -60,6 +73,7 @@ def main():
                     for line in f:
                         w.write(line)
         print("Wrote", args.out_all)
+
 
 if __name__ == "__main__":
     main()

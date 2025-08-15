@@ -11,7 +11,7 @@ We propose a symbolic manifold $\mathbb{S}$ wherein cognitive activity evolves a
 % Revisão: descrição do operador entrópico refinada, mantendo notação consistente
 We formalize the cognitive state’s evolution as a trajectory on $\mathbb{S}$ governed by an entropic operator $\mathcal{E}$, defined by:
 \[
-\frac{d\gamma}{dt} = \mathcal{E}(\gamma(t)) \;=\; 
+\frac{d\gamma}{dt} = \mathcal{E}(\gamma(t)) \;=\;
 \begin{pmatrix}
     -\,\eta_\alpha\,\alpha(t) + \phi_\alpha(\kappa(t),\,E_r(t))\\
     \eta_\kappa\,\big(1 - \alpha(t)\big) + \phi_\kappa(E_r(t))\\
@@ -33,7 +33,7 @@ Drawing inspiration from low-dimensional neural manifold models \cite{langdon202
 Each topotype corresponds to a metastable regime that a cognitive trajectory can occupy or transition between over time, rather than a fixed label. Dynamically, these regimes act as attractors (point attractors or cyclic orbits) in the state space of $\mathbb{S}$. For instance, the Neurotypical profile may correspond to a stable fixed-point attractor (anchoring providing a strong restoring force), whereas the twice-exceptional profile might emerge from a limit cycle (periodic oscillations in $\alpha$ and $E_r$). Changes in parameters can induce qualitative regime shifts (bifurcations); for example, lowering the anchoring feedback $\eta_\alpha$ could destabilize the Neurotypical basin, precipitating a drift toward Collapse or an oscillatory 2e-like state. Such sensitivity to parameters and initial conditions is characteristic of nonlinear dynamical systems, echoing approaches in computational psychiatry that link altered attractor landscapes to shifts in mental state \cite{vandeleemput2014, gauld2023}. % Referências sugeridas: van de Leemput et al. 2014; Gauld & Depannemaecker 2023
 
 % Detalhe: menção à discretização temporal e simulação estocástica
-For simulations, we treat time in discrete steps (see Supplementary Information S1) and iteratively update the state as $\gamma_{t+1} = \gamma_t + \mathcal{E}(\gamma_t)$. This approach accommodates both deterministic and stochastic trajectories, where stochasticity is introduced by adding small noise terms in each dimension to mimic symbolic instability. 
+For simulations, we treat time in discrete steps (see Supplementary Information S1) and iteratively update the state as $\gamma_{t+1} = \gamma_t + \mathcal{E}(\gamma_t)$. This approach accommodates both deterministic and stochastic trajectories, where stochasticity is introduced by adding small noise terms in each dimension to mimic symbolic instability.
 
 % Revisão: integração com hipóteses existentes e conclusão reformulada
 Finally, our entropic manifold formulation integrates the notion of symbolic instability into the entropic brain hypothesis \cite{carhart2014entropic} and its REBUS model \cite{carhart2019rebus}, reframing cognitive breakdowns as transitions within a dynamic mental topology. Accordingly, the model supports generative simulations and classification of symbolic-cognitive profiles, providing a formal framework to investigate neurodiversity, cognitive breakdowns, and prospects for symbolic restoration.

@@ -31,12 +31,10 @@ functions for details.
 
 from __future__ import annotations
 
-import logging
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional, Tuple
+from typing import Dict, Iterable, List, Optional
 
 import matplotlib.pyplot as plt
-from matplotlib.ticker import ScalarFormatter
 
 __all__ = [
     "DEFAULT_RC",
@@ -73,20 +71,22 @@ DEFAULT_RC: Dict[str, object] = {
 # customise colour choices while retaining defaults.
 DEFAULT_PALETTE: Dict[str, str] = {
     "background": "white",
-    "bars": "#1f77b4",      # muted blue
-    "points": "#2ca02c",    # muted green
-    "accent": "#111111",    # near black
-    "line1": "#d62728",     # muted red
-    "line2": "#9467bd",     # muted purple
-    "line3": "#8c564b",     # muted brown
+    "bars": "#1f77b4",  # muted blue
+    "points": "#2ca02c",  # muted green
+    "accent": "#111111",  # near black
+    "line1": "#d62728",  # muted red
+    "line2": "#9467bd",  # muted purple
+    "line3": "#8c564b",  # muted brown
 }
 
 # ---------------------------------------------------------------------------
 # Style utilities
 # ---------------------------------------------------------------------------
 
-def set_style(rc: Optional[Dict[str, object]] = None,
-              palette: Optional[Dict[str, str]] = None) -> Dict[str, str]:
+
+def set_style(
+    rc: Optional[Dict[str, object]] = None, palette: Optional[Dict[str, str]] = None
+) -> Dict[str, str]:
     """Apply global matplotlib style settings.
 
     Parameters
@@ -141,8 +141,12 @@ def ensure_figdir(file: str | Path) -> Path:
     return outdir
 
 
-def savefig_multi(fig: plt.Figure, outdir: Path, basename: str,
-                  exts: Iterable[str] = ("png", "pdf", "svg")) -> List[Path]:
+def savefig_multi(
+    fig: plt.Figure,
+    outdir: Path,
+    basename: str,
+    exts: Iterable[str] = ("png", "pdf", "svg"),
+) -> List[Path]:
     """Save a figure in multiple formats.
 
     Parameters
@@ -190,14 +194,22 @@ def label_all_panels(fig: plt.Figure, start: str = "A") -> None:
     palette = DEFAULT_PALETTE
     for idx, ax in enumerate(fig.axes):
         label = chr(ascii_offset + idx)
-        ax.text(0.02, 0.96, f"{label}", transform=ax.transAxes,
-                fontsize=12, fontweight="bold",
-                va="top", ha="left",
-                color=palette.get("accent", "black"))
+        ax.text(
+            0.02,
+            0.96,
+            f"{label}",
+            transform=ax.transAxes,
+            fontsize=12,
+            fontweight="bold",
+            va="top",
+            ha="left",
+            color=palette.get("accent", "black"),
+        )
 
 
-def add_footer(fig: plt.Figure, text: str, fontsize: int = 9,
-               y_offset: float = -0.05) -> None:
+def add_footer(
+    fig: plt.Figure, text: str, fontsize: int = 9, y_offset: float = -0.05
+) -> None:
     """Append a footer/caption below a figure.
 
     Parameters
@@ -215,9 +227,13 @@ def add_footer(fig: plt.Figure, text: str, fontsize: int = 9,
     fig.text(0.5, y_offset, text, ha="center", fontsize=fontsize)
 
 
-def finalize(fig: plt.Figure, outdir: Path, basename: str,
-             footer: Optional[str] = None,
-             exts: Iterable[str] = ("png", "pdf", "svg")) -> List[Path]:
+def finalize(
+    fig: plt.Figure,
+    outdir: Path,
+    basename: str,
+    footer: Optional[str] = None,
+    exts: Iterable[str] = ("png", "pdf", "svg"),
+) -> List[Path]:
     """Wrap up figure creation: label panels, append a footer and save.
 
     This function combines several helper routines into one:

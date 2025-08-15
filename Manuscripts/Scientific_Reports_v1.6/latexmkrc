@@ -1,4 +1,0 @@
-# força bibtex quando há bibliografia
-$bibtex_use = 2;
-# regra padrão já cuida do bibtex; se quiser, pode definir explicitamente:
-$bibtex = 'bibtex %O %B';
